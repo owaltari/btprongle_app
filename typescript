@@ -1,0 +1,2022 @@
+Script started on Wed 17 Oct 2018 17:14:39 EEST
+q]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ q[K^C
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ 
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ 
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ 
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ 
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ exit[Kman script
+[?1049h[?1h=SCRIPT(1)                                                   User Commands                                                  SCRIPT(1)[m
+[m
+[1mNAME[0m[m
+       script - make typescript of terminal session[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mscript[0m [options] [[4mfile[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       [1mscript[0m  makes a typescript of everything displayed on your terminal.  It is useful for students who need a hardcopy record of[m
+       an interactive session as proof of an assignment, as the typescript file can be printed out later with [1mlpr[0m(1).[m
+[m
+       If the argument [4mfile[24m is given, [1mscript[0m saves the dialogue in this [4mfile[24m.  If no filename is given, the dialogue is saved in the[m
+       file [1mtypescript[0m.[m
+[m
+[1mOPTIONS[0m[m
+       [1m-a[0m, [1m--append[0m[m
+              Append the output to [4mfile[24m or to [1mtypescript[0m, retaining the prior contents.[m
+[m
+       [1m-c[0m, [1m--command[0m [4mcommand[24m[m
+              Run  the [4mcommand[24m rather than an interactive shell.  This makes it easy for a script to capture the output of a program[m
+              that behaves differently when its stdout is not a tty.[m
+[m
+       [1m-e[0m, [1m--return[0m[m
+              Return the exit code of the child process.  Uses the same format as bash termination on signal termination  exit  code[m
+              is 128+n.[m
+[m
+       [1m-f[0m, [1m--flush[0m[m
+              Flush  output  after  each  write.  This is nice for telecooperation: one person does `mkfifo foo; script -f foo', and[m
+              another can supervise real-time what is being done using `cat foo'.[m
+[m
+       [1m--force[0m[m
+              Allow the default output destination, i.e. the typescript file, to be a hard or symbolic link.  The command will  fol‐[m
+              low a symbolic link.[m
+[m
+       [1m-q[0m, [1m--quiet[0m[m
+              Be quiet (do not write start and done messages to either standard output or the typescript file).[m
+[m
+       [1m-t[0m, [1m--timing[0m[=[4mfile[24m][m
+              Output  timing  data  to  standard error, or to [4mfile[24m when given.  This data contains two fields, separated by a space.[m
+              The first field indicates how much time elapsed since the previous output.  The second field indicates how many  char‐[m
+              acters  were  output  this  time.  This information can be used to replay typescripts with realistic typing and output[m
+              delays.[m
+[m
+       [1m-V[0m, [1m--version[0m[m
+              Display version information and exit.[m
+[m
+       [1m-h[0m, [1m--help[0m[m
+[7m Manual page script(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdou[K[Kbuf 
+stdbuf: missing operand
+Try 'stdbuf --help' for more information.
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdbuf --help
+Usage: stdbuf OPTION... COMMAND
+Run COMMAND, with modified buffering operations for its standard streams.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -i, --input=MODE   adjust standard input stream buffering
+  -o, --output=MODE  adjust standard output stream buffering
+  -e, --error=MODE   adjust standard error stream buffering
+      --help     display this help and exit
+      --version  output version information and exit
+
+If MODE is 'L' the corresponding stream will be line buffered.
+This option is invalid with standard input.
+
+If MODE is '0' the corresponding stream will be unbuffered.
+
+Otherwise MODE is a number which may be followed by one of the following:
+KB 1000, K 1024, MB 1000*1000, M 1024*1024, and so on for G, T, P, E, Z, Y.
+In this case the corresponding stream will be fully buffered with the buffer
+size set to MODE bytes.
+
+NOTE: If COMMAND adjusts the buffering of its standard streams ('tee' does
+for example) then that will override corresponding changes by 'stdbuf'.
+Also some filters (like 'dd' and 'cat' etc.) don't use streams for I/O,
+and are thus unaffected by 'stdbuf' settings.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/stdbuf>
+or available locally via: info '(coreutils) stdbuf invocation'
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdbuf --help[K[K[K[K[K-i [K[K[Ki 0[K[K0
+stdbuf: missing operand
+Try 'stdbuf --help' for more information.
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdbuf -i0 ec[K[Kls
+Application    build	     gradle   gradlew.bat  local.properties  screenshots      typescript
+BTprongle.iml  build.gradle  gradlew  LICENSE	   README.md	     settings.gradle
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdbuf -i0 ls|grep grad
+build.[01;31m[Kgrad[m[Kle
+[01;31m[Kgrad[m[Kle
+[01;31m[Kgrad[m[Klew
+[01;31m[Kgrad[m[Klew.bat
+settings.[01;31m[Kgrad[m[Kle
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdbuf -i0 ls|grep grad[K[K[K[K[1P[1@o
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdbuf -o0 ls|grep [1P
+stdbuf: invalid mode ‘ls’
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdbuf -o ls|grep [K[K[K[K[K[K
+stdbuf: invalid mode ‘ls’
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdbuf -o ls[C[C[C[C[C= ls
+stdbuf: invalid mode ‘=’
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdbuf -o= ls[1P ls0 ls
+Application    build	     gradle   gradlew.bat  local.properties  screenshots      typescript
+BTprongle.iml  build.gradle  gradlew  LICENSE	   README.md	     settings.gradle
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ stdbuf -o0 ls|grep set
+[01;31m[Kset[m[Ktings.gradle
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ q[Kstdbuf -o0 ls|grep set[C[1P[1@L
+[01;31m[Kset[m[Ktings.gradle
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ 
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ 
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ 
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ 
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ man cut
+[?1049h[?1h=CUT(1)                                                      User Commands                                                     CUT(1)[m
+[m
+[1mNAME[0m[m
+       cut - remove sections from each line of files[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mcut[0m [4mOPTION[24m... [[4mFILE[24m]...[m
+[m
+[1mDESCRIPTION[0m[m
+       Print selected parts of lines from each FILE to standard output.[m
+[m
+       With no FILE, or when FILE is -, read standard input.[m
+[m
+       Mandatory arguments to long options are mandatory for short options too.[m
+[m
+       [1m-b[0m, [1m--bytes[0m=[4mLIST[24m[m
+              select only these bytes[m
+[m
+       [1m-c[0m, [1m--characters[0m=[4mLIST[24m[m
+              select only these characters[m
+[m
+       [1m-d[0m, [1m--delimiter[0m=[4mDELIM[24m[m
+              use DELIM instead of TAB for field delimiter[m
+[m
+       [1m-f[0m, [1m--fields[0m=[4mLIST[24m[m
+              select only these fields;  also print any line that contains no delimiter character, unless the [1m-s[0m option is specified[m
+[m
+       [1m-n[0m     (ignored)[m
+[m
+       [1m--complement[0m[m
+              complement the set of selected bytes, characters or fields[m
+[m
+       [1m-s[0m, [1m--only-delimited[0m[m
+              do not print lines not containing delimiters[m
+[m
+       [1m--output-delimiter[0m=[4mSTRING[24m[m
+              use STRING as the output delimiter the default is to use the input delimiter[m
+[m
+       [1m-z[0m, [1m--zero-terminated[0m[m
+              line delimiter is NUL, not newline[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       Use  one,  and  only  one  of [1m-b[0m, [1m-c[0m or [1m-f[0m.  Each LIST is made up of one range, or many ranges separated by commas.  Selected[m
+       input is written in the same order that it is read, and is written exactly once.  Each range is one of:[m
+[7m Manual page cut(1) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049l]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ mn [K[Kan tr
+[?1049h[?1h=TR(1)                                                       User Commands                                                      TR(1)[m
+[m
+[1mNAME[0m[m
+       tr - translate or delete characters[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mtr[0m [[4mOPTION[24m]... [4mSET1[24m [[4mSET2[24m][m
+[m
+[1mDESCRIPTION[0m[m
+       Translate, squeeze, and/or delete characters from standard input, writing to standard output.[m
+[m
+       [1m-c[0m, [1m-C[0m, [1m--complement[0m[m
+              use the complement of SET1[m
+[m
+       [1m-d[0m, [1m--delete[0m[m
+              delete characters in SET1, do not translate[m
+[m
+       [1m-s[0m, [1m--squeeze-repeats[0m[m
+              replace  each  sequence  of a repeated character that is listed in the last specified SET, with a single occurrence of[m
+              that character[m
+[m
+       [1m-t[0m, [1m--truncate-set1[0m[m
+              first truncate SET1 to length of SET2[m
+[m
+       [1m--help[0m display this help and exit[m
+[m
+       [1m--version[0m[m
+              output version information and exit[m
+[m
+       SETs are specified as strings of characters.  Most represent themselves.  Interpreted sequences are:[m
+[m
+       \NNN   character with octal value NNN (1 to 3 octal digits)[m
+[m
+       \\     backslash[m
+[m
+       \a     audible BEL[m
+[m
+       \b     backspace[m
+[m
+       \f     form feed[m
+[m
+       \n     new line[m
+[m
+       \r     return[m
+[m
+       \t     horizontal tab[m
+[m
+       \v     vertical tab[m
+[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       CHAR1-CHAR2[m
+[7m Manual page tr(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all characters from CHAR1 to CHAR2 in ascending order[m
+[7m Manual page tr(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [CHAR*][m
+[7m Manual page tr(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              in SET2, copies of CHAR until length of SET1[m
+[7m Manual page tr(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [CHAR*REPEAT][m
+[7m Manual page tr(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              REPEAT copies of CHAR, REPEAT octal if starting with 0[m
+[7m Manual page tr(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:alnum:][m
+[7m Manual page tr(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all letters and digits[m
+[7m Manual page tr(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:alpha:][m
+[7m Manual page tr(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all letters[m
+[7m Manual page tr(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:blank:][m
+[7m Manual page tr(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all horizontal whitespace[m
+[7m Manual page tr(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:cntrl:][m
+[7m Manual page tr(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              that character[m
+[49;1H[K[7m Manual page tr(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              replace  each  sequence  of a repeated character that is listed in the last specified SET, with a single occurrence of[m
+[49;1H[K[7m Manual page tr(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-s[0m, [1m--squeeze-repeats[0m[m
+[49;1H[K[7m Manual page tr(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              delete characters in SET1, do not translate[m
+[49;1H[K[7m Manual page tr(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-d[0m, [1m--delete[0m[m
+[49;1H[K[7m Manual page tr(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              use the complement of SET1[m
+[49;1H[K[7m Manual page tr(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-c[0m, [1m-C[0m, [1m--complement[0m[m
+[49;1H[K[7m Manual page tr(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Translate, squeeze, and/or delete characters from standard input, writing to standard output.[m
+[49;1H[K[7m Manual page tr(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mDESCRIPTION[0m[m
+[49;1H[K[7m Manual page tr(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mtr[0m [[4mOPTION[24m]... [4mSET1[24m [[4mSET2[24m][m
+[49;1H[K[7m Manual page tr(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m[m
+[49;1H[K[7m Manual page tr(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       tr - translate or delete characters[m
+[49;1H[K[7m Manual page tr(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNAME[0m[m
+[49;1H[K[7m Manual page tr(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HMTR(1)                                                       User Commands                                                      TR(1)[m
+[49;1H[K[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       CHAR1-CHAR2[m
+[7m Manual page tr(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all characters from CHAR1 to CHAR2 in ascending order[m
+[7m Manual page tr(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [CHAR*][m
+[7m Manual page tr(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              in SET2, copies of CHAR until length of SET1[m
+[7m Manual page tr(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [CHAR*REPEAT][m
+[7m Manual page tr(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              REPEAT copies of CHAR, REPEAT octal if starting with 0[m
+[7m Manual page tr(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:alnum:][m
+[7m Manual page tr(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all letters and digits[m
+[7m Manual page tr(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:alpha:][m
+[7m Manual page tr(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all letters[m
+[7m Manual page tr(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:blank:][m
+[7m Manual page tr(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all horizontal whitespace[m
+[7m Manual page tr(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:cntrl:][m
+[7m Manual page tr(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all control characters[m
+[7m Manual page tr(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:digit:][m
+[7m Manual page tr(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all digits[m
+[7m Manual page tr(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:graph:][m
+[7m Manual page tr(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all printable characters, not including space[m
+[7m Manual page tr(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:lower:][m
+[7m Manual page tr(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all lower case letters[m
+[7m Manual page tr(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:print:][m
+[7m Manual page tr(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all printable characters, including space[m
+[7m Manual page tr(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:punct:][m
+[7m Manual page tr(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all punctuation characters[m
+[7m Manual page tr(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:space:][m
+[7m Manual page tr(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all horizontal or vertical whitespace[m
+[7m Manual page tr(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:upper:][m
+[7m Manual page tr(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all upper case letters[m
+[7m Manual page tr(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:xdigit:][m
+[7m Manual page tr(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all hexadecimal digits[m
+[7m Manual page tr(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [=CHAR=][m
+[7m Manual page tr(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all characters which are equivalent to CHAR[m
+[7m Manual page tr(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Translation occurs if [1m-d[0m is not given and both SET1 and SET2 appear.  [1m-t[0m may be used only when translating.  SET2 is extended[m
+[7m Manual page tr(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to  length  of SET1 by repeating its last character as necessary.  Excess characters of SET2 are ignored.  Only [:lower:] and[m
+[7m Manual page tr(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:upper:] are guaranteed to expand in ascending order; used in SET2 while translating, they may only  be  used  in  pairs  to[m
+[7m Manual page tr(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       specify case conversion.  [1m-s[0m uses the last specified SET, and occurs after translation or deletion.[m
+[7m Manual page tr(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mAUTHOR[0m[m
+[7m Manual page tr(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Written by Jim Meyering.[m
+[7m Manual page tr(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mREPORTING[0m [1mBUGS[0m[m
+[7m Manual page tr(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       GNU coreutils online help: <http://www.gnu.org/software/coreutils/>[m
+[7m Manual page tr(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Report tr translation bugs to <http://translationproject.org/team/>[m
+[7m Manual page tr(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mCOPYRIGHT[0m[m
+[7m Manual page tr(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Copyright    ©    2016    Free    Software    Foundation,    Inc.    License   GPLv3+:   GNU   GPL   version   3   or   later[m
+[7m Manual page tr(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       <http://gnu.org/licenses/gpl.html>.[m
+[7m Manual page tr(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.[m
+[7m Manual page tr(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [:blank:][m
+[49;1H[K[7m Manual page tr(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              all letters[m
+[49;1H[K[7m Manual page tr(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [:alpha:][m
+[49;1H[K[7m Manual page tr(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              all letters and digits[m
+[49;1H[K[7m Manual page tr(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [:alnum:][m
+[49;1H[K[7m Manual page tr(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              REPEAT copies of CHAR, REPEAT octal if starting with 0[m
+[49;1H[K[7m Manual page tr(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [CHAR*REPEAT][m
+[49;1H[K[7m Manual page tr(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              in SET2, copies of CHAR until length of SET1[m
+[49;1H[K[7m Manual page tr(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [CHAR*][m
+[49;1H[K[7m Manual page tr(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              all characters from CHAR1 to CHAR2 in ascending order[m
+[49;1H[K[7m Manual page tr(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       CHAR1-CHAR2[m
+[49;1H[K[7m Manual page tr(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \v     vertical tab[m
+[49;1H[K[7m Manual page tr(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \t     horizontal tab[m
+[49;1H[K[7m Manual page tr(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \r     return[m
+[49;1H[K[7m Manual page tr(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \n     new line[m
+[49;1H[K[7m Manual page tr(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \f     form feed[m
+[49;1H[K[7m Manual page tr(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \b     backspace[m
+[49;1H[K[7m Manual page tr(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \a     audible BEL[m
+[49;1H[K[7m Manual page tr(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \\     backslash[m
+[49;1H[K[7m Manual page tr(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \NNN   character with octal value NNN (1 to 3 octal digits)[m
+[49;1H[K[7m Manual page tr(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       SETs are specified as strings of characters.  Most represent themselves.  Interpreted sequences are:[m
+[49;1H[K[7m Manual page tr(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              output version information and exit[m
+[49;1H[K[7m Manual page tr(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--version[0m[m
+[49;1H[K[7m Manual page tr(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--help[0m display this help and exit[m
+[49;1H[K[7m Manual page tr(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              first truncate SET1 to length of SET2[m
+[49;1H[K[7m Manual page tr(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-t[0m, [1m--truncate-set1[0m[m
+[49;1H[K[7m Manual page tr(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              that character[m
+[49;1H[K[7m Manual page tr(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              replace  each  sequence  of a repeated character that is listed in the last specified SET, with a single occurrence of[m
+[49;1H[K[7m Manual page tr(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-s[0m, [1m--squeeze-repeats[0m[m
+[49;1H[K[7m Manual page tr(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              delete characters in SET1, do not translate[m
+[49;1H[K[7m Manual page tr(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-d[0m, [1m--delete[0m[m
+[49;1H[K[7m Manual page tr(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              use the complement of SET1[m
+[49;1H[K[7m Manual page tr(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-c[0m, [1m-C[0m, [1m--complement[0m[m
+[49;1H[K[7m Manual page tr(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Translate, squeeze, and/or delete characters from standard input, writing to standard output.[m
+[49;1H[K[7m Manual page tr(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mDESCRIPTION[0m[m
+[49;1H[K[7m Manual page tr(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mtr[0m [[4mOPTION[24m]... [4mSET1[24m [[4mSET2[24m][m
+[49;1H[K[7m Manual page tr(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m[m
+[49;1H[K[7m Manual page tr(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              in SET2, copies of CHAR until length of SET1[m
+[7m Manual page tr(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [CHAR*REPEAT][m
+[7m Manual page tr(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              REPEAT copies of CHAR, REPEAT octal if starting with 0[m
+[7m Manual page tr(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:alnum:][m
+[7m Manual page tr(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all letters and digits[m
+[7m Manual page tr(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:alpha:][m
+[7m Manual page tr(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all letters[m
+[7m Manual page tr(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:blank:][m
+[7m Manual page tr(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all horizontal whitespace[m
+[7m Manual page tr(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:cntrl:][m
+[7m Manual page tr(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all control characters[m
+[7m Manual page tr(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:digit:][m
+[7m Manual page tr(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all digits[m
+[7m Manual page tr(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:graph:][m
+[7m Manual page tr(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all printable characters, not including space[m
+[7m Manual page tr(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:lower:][m
+[7m Manual page tr(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all lower case letters[m
+[7m Manual page tr(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:print:][m
+[7m Manual page tr(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all printable characters, including space[m
+[7m Manual page tr(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:punct:][m
+[7m Manual page tr(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all punctuation characters[m
+[7m Manual page tr(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:space:][m
+[7m Manual page tr(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all horizontal or vertical whitespace[m
+[7m Manual page tr(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:upper:][m
+[7m Manual page tr(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all upper case letters[m
+[7m Manual page tr(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:xdigit:][m
+[7m Manual page tr(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all hexadecimal digits[m
+[7m Manual page tr(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [=CHAR=][m
+[7m Manual page tr(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all characters which are equivalent to CHAR[m
+[7m Manual page tr(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Translation occurs if [1m-d[0m is not given and both SET1 and SET2 appear.  [1m-t[0m may be used only when translating.  SET2 is extended[m
+[7m Manual page tr(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       to  length  of SET1 by repeating its last character as necessary.  Excess characters of SET2 are ignored.  Only [:lower:] and[m
+[7m Manual page tr(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:upper:] are guaranteed to expand in ascending order; used in SET2 while translating, they may only  be  used  in  pairs  to[m
+[7m Manual page tr(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       specify case conversion.  [1m-s[0m uses the last specified SET, and occurs after translation or deletion.[m
+[7m Manual page tr(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mAUTHOR[0m[m
+[7m Manual page tr(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Written by Jim Meyering.[m
+[7m Manual page tr(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mREPORTING[0m [1mBUGS[0m[m
+[7m Manual page tr(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       GNU coreutils online help: <http://www.gnu.org/software/coreutils/>[m
+[7m Manual page tr(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Report tr translation bugs to <http://translationproject.org/team/>[m
+[7m Manual page tr(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mCOPYRIGHT[0m[m
+[7m Manual page tr(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Copyright    ©    2016    Free    Software    Foundation,    Inc.    License   GPLv3+:   GNU   GPL   version   3   or   later[m
+[7m Manual page tr(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       <http://gnu.org/licenses/gpl.html>.[m
+[7m Manual page tr(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.[m
+[7m Manual page tr(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mSEE[0m [1mALSO[0m[m
+[7m Manual page tr(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       Full documentation at: <http://www.gnu.org/software/coreutils/tr>[m
+[7m Manual page tr(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       or available locally via: info '(coreutils) tr invocation'[m
+[7m Manual page tr(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[KGNU coreutils 8.25                                          February 2017                                                      TR(1)[m
+[7m Manual page tr(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page tr(1) line 72/119 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page tr(1) line 72/119 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page tr(1) line 72/119 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page tr(1) line 72/119 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page tr(1) line 72/119 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page tr(1) line 72/119 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page tr(1) line 72/119 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page tr(1) line 72/119 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[K[7m Manual page tr(1) line 72/119 (END) (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [:digit:][m
+[49;1H[K[7m Manual page tr(1) line 71/119 97% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 70/119 97% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              all control characters[m
+[49;1H[K[7m Manual page tr(1) line 69/119 95% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [:cntrl:][m
+[49;1H[K[7m Manual page tr(1) line 68/119 93% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 67/119 92% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              all horizontal whitespace[m
+[49;1H[K[7m Manual page tr(1) line 66/119 92% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [:blank:][m
+[49;1H[K[7m Manual page tr(1) line 65/119 89% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 64/119 88% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              all letters[m
+[49;1H[K[7m Manual page tr(1) line 63/119 85% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [:alpha:][m
+[49;1H[K[7m Manual page tr(1) line 62/119 84% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 61/119 84% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              all letters and digits[m
+[49;1H[K[7m Manual page tr(1) line 60/119 82% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [:alnum:][m
+[49;1H[K[7m Manual page tr(1) line 59/119 80% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 58/119 79% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              REPEAT copies of CHAR, REPEAT octal if starting with 0[m
+[49;1H[K[7m Manual page tr(1) line 57/119 79% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [CHAR*REPEAT][m
+[49;1H[K[7m Manual page tr(1) line 56/119 78% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 55/119 78% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              in SET2, copies of CHAR until length of SET1[m
+[49;1H[K[7m Manual page tr(1) line 54/119 78% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [CHAR*][m
+[49;1H[K[7m Manual page tr(1) line 53/119 75% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 52/119 71% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              all characters from CHAR1 to CHAR2 in ascending order[m
+[49;1H[K[7m Manual page tr(1) line 51/119 68% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       CHAR1-CHAR2[m
+[49;1H[K[7m Manual page tr(1) line 50/119 64% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 49/119 64% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \v     vertical tab[m
+[49;1H[K[7m Manual page tr(1) line 48/119 63% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 47/119 62% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \t     horizontal tab[m
+[49;1H[K[7m Manual page tr(1) line 46/119 62% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 45/119 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \r     return[m
+[49;1H[K[7m Manual page tr(1) line 44/119 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 43/119 61% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \n     new line[m
+[49;1H[K[7m Manual page tr(1) line 42/119 60% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 41/119 60% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \f     form feed[m
+[49;1H[K[7m Manual page tr(1) line 40/119 60% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 39/119 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \b     backspace[m
+[49;1H[K[7m Manual page tr(1) line 38/119 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 37/119 58% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \a     audible BEL[m
+[49;1H[K[7m Manual page tr(1) line 36/119 57% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 35/119 56% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \\     backslash[m
+[49;1H[K[7m Manual page tr(1) line 34/119 56% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 33/119 55% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       \NNN   character with octal value NNN (1 to 3 octal digits)[m
+[49;1H[K[7m Manual page tr(1) line 32/119 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 31/119 54% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       SETs are specified as strings of characters.  Most represent themselves.  Interpreted sequences are:[m
+[49;1H[K[7m Manual page tr(1) line 30/119 53% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 29/119 53% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              output version information and exit[m
+[49;1H[K[7m Manual page tr(1) line 28/119 53% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--version[0m[m
+[49;1H[K[7m Manual page tr(1) line 27/119 51% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 26/119 51% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m--help[0m display this help and exit[m
+[49;1H[K[7m Manual page tr(1) line 25/119 51% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 24/119 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              first truncate SET1 to length of SET2[m
+[49;1H[K[7m Manual page tr(1) line 23/119 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-t[0m, [1m--truncate-set1[0m[m
+[49;1H[K[7m Manual page tr(1) line 22/119 50% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 21/119 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              that character[m
+[49;1H[K[7m Manual page tr(1) line 20/119 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              replace  each  sequence  of a repeated character that is listed in the last specified SET, with a single occurrence of[m
+[49;1H[K[7m Manual page tr(1) line 19/119 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-s[0m, [1m--squeeze-repeats[0m[m
+[49;1H[K[7m Manual page tr(1) line 18/119 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 17/119 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              delete characters in SET1, do not translate[m
+[49;1H[K[7m Manual page tr(1) line 16/119 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-d[0m, [1m--delete[0m[m
+[49;1H[K[7m Manual page tr(1) line 15/119 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 14/119 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              use the complement of SET1[m
+[49;1H[K[7m Manual page tr(1) line 13/119 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-c[0m, [1m-C[0m, [1m--complement[0m[m
+[49;1H[K[7m Manual page tr(1) line 12/119 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 11/119 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       Translate, squeeze, and/or delete characters from standard input, writing to standard output.[m
+[49;1H[K[7m Manual page tr(1) line 10/119 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mDESCRIPTION[0m[m
+[49;1H[K[7m Manual page tr(1) line 9/119 43% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 8/119 42% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1mtr[0m [[4mOPTION[24m]... [4mSET1[24m [[4mSET2[24m][m
+[49;1H[K[7m Manual page tr(1) line 7/119 42% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mSYNOPSIS[0m[m
+[49;1H[K[7m Manual page tr(1) line 6/119 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 5/119 40% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       tr - translate or delete characters[m
+[49;1H[K[7m Manual page tr(1) line 4/119 40% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[1mNAME[0m[m
+[49;1H[K[7m Manual page tr(1) line 3/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 2/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HMTR(1)                                                       User Commands                                                      TR(1)[m
+[49;1H[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[K[7m Manual page tr(1) line 1/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 2/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       CHAR1-CHAR2[m
+[7m Manual page tr(1) line 3/119 38% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all characters from CHAR1 to CHAR2 in ascending order[m
+[7m Manual page tr(1) line 4/119 40% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 5/119 40% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [CHAR*][m
+[7m Manual page tr(1) line 6/119 41% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              in SET2, copies of CHAR until length of SET1[m
+[7m Manual page tr(1) line 7/119 42% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 8/119 42% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [CHAR*REPEAT][m
+[7m Manual page tr(1) line 9/119 43% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              REPEAT copies of CHAR, REPEAT octal if starting with 0[m
+[7m Manual page tr(1) line 10/119 44% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 11/119 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:alnum:][m
+[7m Manual page tr(1) line 12/119 45% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all letters and digits[m
+[7m Manual page tr(1) line 13/119 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 14/119 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:alpha:][m
+[7m Manual page tr(1) line 15/119 46% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all letters[m
+[7m Manual page tr(1) line 16/119 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 17/119 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:blank:][m
+[7m Manual page tr(1) line 18/119 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K              all horizontal whitespace[m
+[7m Manual page tr(1) line 19/119 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page tr(1) line 20/119 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [:cntrl:][m
+[7m Manual page tr(1) line 21/119 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              that character[m
+[49;1H[K[7m Manual page tr(1) line 20/119 49% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              replace  each  sequence  of a repeated character that is listed in the last specified SET, with a single occurrence of[m
+[49;1H[K[7m Manual page tr(1) line 19/119 48% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM       [1m-s[0m, [1m--squeeze-repeats[0m[m
+[49;1H[K[7m Manual page tr(1) line 18/119 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM[m
+[49;1H[K[7m Manual page tr(1) line 17/119 47% (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KAA[K[HM              delete characters in SET1, do not translate[m
+[49;1H[K[7m Manual page tr(1) line 16/119 47% (press h for help or q to quit)[27m[K[K[?1l>[?1049l]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ ls[K[K
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ 
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ 
+]0;owaltari@whq-56: ~/AndroidStudioProjects/BTprongleowaltari@whq-56:~/AndroidStudioProjects/BTprongle$ cd 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ ls
+total 241M
+-rw-------  1 owaltari 781M Mar 17  2014 [0m[01;31m2014-01-07-wheezy-raspbian.zip[0m
+-rw-------  1 owaltari  60K Dec  2  2015 2270_001.pdf
+drwx------  3 owaltari 4.0K May 12  2016 [01;34mACM[0m
+drwx------  2 owaltari 4.0K Sep 21  2017 [01;34macmart-master[0m
+drwx------  7 owaltari 4.0K Dec 22  2016 [01;34mActivePerl-5.24[0m
+-rw-------  1 owaltari  300 Feb 27  2013 adawdwad
+drwx------  3 owaltari 4.0K Sep 16  2015 [01;34mAndroid[0m
+drwx------  4 owaltari 4.0K Jun 23  2016 [01;34mandroid-binaries-hammerhead[0m
+-rw-------  1 owaltari 5.1K Jul  4  2016 Android_build_instructions.html
+-rw-------  1 owaltari  154 Jul  4  2016 Android_build_instructions.html~
+drwx------  3 owaltari 4.0K Feb 10  2017 [01;34mandroid_src[0m
+drwxrwxr-x  8 owaltari 4.0K Sep  4 13:54 [01;34mandroid-studio[0m
+drwxr-xr-x  8 owaltari 4.0K Oct 17 16:05 [01;34mAndroidStudioProjects[0m
+-rw-------  1 owaltari 119K Apr  2  2015 application.pdf
+-rw-------  1 owaltari   99 Nov  8  2012 bashtest.sh
+-rw-------  1 owaltari   91 Nov  8  2012 bashtest.sh~
+drwx------  4 owaltari 4.0K Sep 23  2016 [01;34mBCDC[0m
+drwx------  6 owaltari 4.0K Jun  9  2016 [01;34mbcdc-core[0m
+drwx------  3 owaltari 4.0K Feb 20  2017 [01;34mbcdc-game[0m
+-rw-------  1 owaltari  13M Oct 28  2014 [01;31mbikecad.rar[0m
+drwx------  2 owaltari 4.0K Jan 29  2018 [01;34mbin[0m
+drwx------  3 owaltari 4.0K Nov 14  2017 [01;34mbluetooth[0m
+drwx------  2 owaltari 4.0K Nov 23  2017 [01;34mbtcompanion[0m
+lrwxrwxrwx  1 owaltari   26 Feb  4  2014 [40;31;01mbus-bdt[0m -> [40;31;01m/fs/home/owaltari/bus-bdt/[0m
+-rw-------  1 owaltari  21K Sep 25  2015 capture.pcap
+-rw-------  1 owaltari  411 Apr  8  2013 ccnb_data
+drwx------  3 owaltari 4.0K Dec 13  2013 [01;34mccnr[0m
+drwx------  7 owaltari 4.0K Dec 13  2013 [01;34mCCNx[0m
+-rw-------  1 owaltari 1.7K Feb  5  2013 ccnx_repository_keystore
+drwx------  4 owaltari 4.0K Apr 17  2018 [01;34mCEC[0m
+drwx------  2 owaltari 4.0K Aug  5  2016 [01;34mcodegolf[0m
+drwx------  6 owaltari 4.0K Jan  5  2016 [01;34mCoNe[0m
+drwx------  2 owaltari 4.0K Mar  2  2017 [01;34mCoNe kuvat[0m
+-rw-------  1 owaltari   24 Sep 21  2015 CSC_tunnus
+lrwxrwxrwx  1 owaltari   18 Apr 24 10:55 [01;36mcs_home[0m -> [01;34m/cs/home/owaltari/[0m
+drwx------  2 owaltari 4.0K May 12  2014 [01;34mcsv[0m
+drwx------  2 owaltari 4.0K Mar 23  2015 [01;34mCV[0m
+drwx------  3 owaltari 4.0K Apr 16  2015 [01;34mdatasets[0m
+-rw-------  1 owaltari 2.5K Feb 27  2013 dbus_listener.c
+drwx------ 16 owaltari  12K Oct  8 10:43 [01;34mDesktop[0m
+drwx------  4 owaltari 4.0K Oct 27  2015 [01;34mdiff[0m
+drwx------  6 owaltari 4.0K Apr 17  2018 [01;34mDistSys[0m
+-rw-------  1 owaltari  175 Oct  4  2016 distsys_ssh-key_instructional.html
+-rw-------  1 owaltari  214 Oct  4  2016 distsys_ssh-key_instructional.html~
+-rw-------  1 owaltari 2.6K Sep 14  2016 distsys_ws2.txt
+-rw-------  1 owaltari 2.6K Sep 14  2016 distsys_ws2.txt~
+drwx------  3 owaltari 4.0K Oct  8 15:26 [01;34mDocuments[0m
+drwx------  2 owaltari  52K Oct 17 13:17 [01;34mDownloads[0m
+drwx------  6 owaltari 4.0K Sep  1  2017 [01;34mDropbox[0m
+drwx------  4 owaltari 4.0K Mar  2  2017 [01;34mdsp[0m
+drwx------  2 owaltari 4.0K Nov 16  2015 [01;34mdumpcap[0m
+drwx------  3 owaltari 4.0K Jan 17  2016 [01;34meggdrop[0m
+drwxr-xr-x  7 owaltari 4.0K Oct 23  2015 [01;34mEMC_Wi-Push_evaluations[0m
+-rw-------  1 owaltari  16M Oct  1  2015 [01;31mEval_backups.tar.gz[0m
+-rw-------  1 owaltari 8.3K Oct 25  2012 examples.desktop
+drwx------  2 owaltari 4.0K Jun 25  2014 [01;34meyeofthepi[0m
+-rw-------  1 owaltari  19K Oct 23  2015 [01;35mfigure_1.png[0m
+drwx------  4 owaltari 4.0K Mar 16  2016 [01;34mgithub[0m
+drwx------  3 owaltari 4.0K Mar  9  2016 [01;34mgnuplot_playground[0m
+drwx------  6 owaltari 4.0K Dec  2  2013 [01;34mgradu[0m
+-rw-------  1 owaltari 110K Nov  8  2012 [01;31mgraph.tar[0m
+drwx------  4 owaltari 4.0K Jan  2  2016 [01;34mHammerhead[0m
+drwx------  7 owaltari 4.0K Jan 20  2017 [01;34mHonor4X[0m
+drwx------  2 owaltari 4.0K Oct 27  2015 [01;34mhostapd[0m
+drwx------  2 owaltari 4.0K Jan 23  2017 [01;34mhtdocs[0m
+drwx------  3 owaltari 4.0K Mar 19  2015 [01;34mhtml[0m
+drwx------  2 owaltari 4.0K Apr  2  2014 [01;34mHumblebundle[0m
+-rw-------  1 owaltari   57 Mar 16  2016 igg_perks
+-rw-------  1 owaltari   27 Mar 16  2016 igg_perks~
+drwx------  3 owaltari 4.0K Jan 29  2013 [01;34minclude[0m
+drwx------  2 owaltari 4.0K Dec 13  2013 [01;34mindex[0m
+-rw-------  1 owaltari 9.1K Oct 10  2012 index.html
+drwx------  2 owaltari 4.0K Oct 15  2014 [01;34minstalltrx[0m
+drwx------  2 owaltari 4.0K Dec 14  2015 [01;34mInstructions_for_Utku[0m
+drwxr-xr-x  2 owaltari 4.0K Apr 19 19:29 [01;34mInternship presentation[0m
+drwxr-xr-x  5 owaltari 4.0K Dec 14  2015 [01;34mInternship_work[0m
+drwx------  5 owaltari 4.0K Aug 13  2014 [01;34mkdenlive[0m
+-rw-------  1 owaltari  520 Dec  7  2015 König_adapterit
+-rw-------  1 owaltari  464 Dec  7  2015 König_adapterit~
+-rw-------  1 owaltari  74M Mar  2  2017 [01;31mkuvat.tar[0m
+drwx------  2 owaltari 4.0K Jun 11 22:06 [01;34mLabConnect[0m
+drwx------  4 owaltari 4.0K Jan 24  2013 [01;34mLatex[0m
+drwx------  2 owaltari 4.0K Dec 13  2013 [01;34mlib[0m
+drwx------  3 owaltari 4.0K Dec  4  2013 [01;34mliberouter[0m
+-rw-------  1 owaltari   82 Dec 22  2015 linear_decrease.py
+-rw-------  1 owaltari   23 Dec 22  2015 linear_decrease.py~
+drwx------  2 owaltari 4.0K Apr 30  2014 [01;34mlooppi[0m
+drwx------  6 owaltari 4.0K Mar 16  2015 [01;34mmacmon[0m
+drwx------  4 owaltari 4.0K May 27  2016 [01;34mmacmonitor[0m
+-rw-------  1 owaltari 420K Mar 24  2016 [01;31mmacmonitor_old_airodump_implementation.tar[0m
+drwx------  2 owaltari 4.0K Jul  4  2016 [01;34mmobisys_matkalasku[0m
+drwx------  5 owaltari 4.0K Dec 16  2013 [01;34mmonc[0m
+drwx------  2 owaltari 4.0K Apr 13  2015 [01;34mmonitoring[0m
+-rw-------  1 owaltari 2.0K Nov 19  2012 motion_detector_dbus_capture.txt
+drwx------ 13 owaltari 4.0K Nov 12  2013 [01;34mMusic[0m
+drwx------  2 owaltari 4.0K May 30  2016 [01;34mnebula_sshfs[0m
+drwx------  5 owaltari 4.0K Nov 23  2012 [01;34mNetworkX[0m
+drwx------  5 owaltari 4.0K Mar  9  2016 [01;34mnode[0m
+drwx------ 12 owaltari 4.0K May 17  2016 [01;34mnode_modules[0m
+-rwxr-xr-x  1 owaltari  430 Jan 22  2014 [01;32mnoppa.py[0m
+-rwxr-xr-x  1 owaltari  179 Jan 22  2014 [01;32mnoppa.py~[0m
+drwx------  4 owaltari 4.0K Jan 29  2018 [01;34mopenshift[0m
+drwx------  2 owaltari 4.0K Nov  7  2014 [01;34mopintosuunnitelma[0m
+-rw-------  1 owaltari 429K Mar 21  2015 [01;31mopintosuunnitelma.tar.gz[0m
+-rw-------  1 owaltari 290K Sep 18  2014 [01;31mopintosuunnitelma_v0.2.tar[0m
+drwx------  5 owaltari 4.0K Nov 20  2013 [01;34moppnets[0m
+-rw-------  1 owaltari 4.5K Sep  3  2015 osoitteet.txt
+drwx------  2 owaltari 4.0K Feb  6  2015 [01;34moui[0m
+drwx------  6 owaltari 4.0K Feb 27  2017 [01;34mowaltari_ccn_in_iot[0m
+drwx------  6 owaltari 4.0K Feb 27  2017 [01;34mowaltari_wireless_shark[0m
+drwx------  4 owaltari 4.0K Jul 19 10:37 [01;34mPapers[0m
+drwx------  7 owaltari 4.0K Jun 15 17:02 [01;34mPictures[0m
+drwx------  3 owaltari 4.0K Feb  4  2014 [01;34mpiggybackbus[0m
+drwx------  2 owaltari 4.0K Dec  9  2014 [01;34mposteri[0m
+drwx------  4 owaltari 4.0K May 11  2015 [01;34mpresentation[0m
+drwx------  2 owaltari 4.0K Oct 25  2012 [01;34mPublic[0m
+drwx------  3 owaltari 4.0K Sep 11 16:54 [01;34mpython[0m
+drwx------  6 owaltari 4.0K Mar 13  2014 [01;34mquestionboard[0m
+drwxr-xr-x  1     1000 4.0K Oct 17 14:11 [01;34mraspberry[0m
+drwx------  3 owaltari 4.0K Dec 16  2015 [01;34mraspberry_tcpdump_monitor[0m
+drwx------  3 owaltari 4.0K Jun 27 13:11 [01;34mraspbian[0m
+drwx------  2 owaltari 4.0K Jan 17  2014 [01;34mreittiopas[0m
+-rw-------  1 owaltari  23M Sep 27  2013 [01;31mreittiopas.tar[0m
+-rw-------  1 owaltari 4.2K Oct 17  2016 research_ethics.txt
+drwx------  2 owaltari 4.0K Oct 10  2016 [01;34mScience_slam[0m
+drwx------  2 owaltari 4.0K Oct  7  2013 [01;34msed[0m
+-rwx------  1 owaltari 8.3K May  7  2014 [01;32msee[0m
+-rw-------  1 owaltari  105 May  7  2014 see.c
+drwx------  2 owaltari 4.0K Mar 11  2013 [01;34mShare[0m
+drwx------  2 owaltari 4.0K Jan 11  2017 [01;34msniffer[0m
+-rw-------  1 owaltari 3.5K May 31 16:43 snip_2015_11_26.pcap.pcapng
+-rw-------  1 owaltari  604 Feb 10  2014 Solmu.class
+-rw-------  1 owaltari  242 Feb 10  2014 Solmu.java
+-rw-------  1 owaltari  219 Feb 10  2014 Solmu.java~
+drwx------  2 owaltari 4.0K Jan 15  2015 [01;34msqlite[0m
+drwx------ 17 owaltari 4.0K Nov 27  2017 [01;34msrc[0m
+drwx------  2 owaltari 4.0K May 31  2017 [01;34msshfs[0m
+drwx------  3 owaltari 4.0K Feb 17  2017 [01;34mssid_leaking[0m
+drwx------  2 owaltari 4.0K Sep 17 14:04 [01;34mstatic_prongle[0m
+drwx------  4 owaltari 4.0K May 11  2015 [01;34msvn[0m
+drwx------ 11 owaltari 4.0K May 26  2016 [01;34mtcpdump_data_analyzer[0m
+-rw-------  1 owaltari 115M Oct 13  2017 [01;31mtcpdumps_from_macmonitor.tar[0m
+drwx------  2 owaltari 4.0K Oct 25  2012 [01;34mTemplates[0m
+drwx------ 12 owaltari 4.0K Mar 29  2018 [01;34mThere[0m
+drwx------  2 owaltari 4.0K Sep 30  2015 [01;34mtrafficgen[0m
+drwxrwxr-x  2 owaltari 4.0K Feb  5  2013 [01;34mUbuntu One[0m
+drwx------  2 owaltari 4.0K May 13  2016 [01;34mukko[0m
+-rwxr-xr-x  1 owaltari  182 Apr  3  2014 [01;32musbreset.sh[0m
+-rw-------  1 owaltari  135 Apr  3  2014 usbreset.sh~
+drwx------  2 owaltari 4.0K Feb 21  2013 [01;34muserdata[0m
+drwx--x---  1 owaltari  174 Sep 17 12:46 [01;34musers[0m
+drwx------  3 owaltari 4.0K Mar 17  2015 [01;34mvanilla_aircrack[0m
+drwx------  2 owaltari 4.0K Jan 29  2013 [01;34mVideos[0m
+drwx------  2 owaltari 4.0K Sep 16  2015 [01;34mVirtualBox VMs[0m
+drwx------  2 owaltari 4.0K Aug 31  2016 [01;34mVuokatin_data[0m
+drwx------  3 owaltari 4.0K Mar 17  2016 [01;34mwifeye-backend-server[0m
+drwx------ 10 owaltari 4.0K Mar 25  2018 [01;34mwifi_association_measurements[0m
+drwx------  4 owaltari 4.0K Mar 12  2015 [01;34mwifi_sniffing[0m
+drwx------  3 owaltari 4.0K Oct 27  2015 [01;34mwpa_supplicant_from_AOSP[0m
+drwx------  2 owaltari 4.0K Mar  9  2017 [01;34mwscinc[0m
+drwx------  3 owaltari 4.0K May 30  2016 [01;34mwww[0m
+-rw-------  1 owaltari 1.2K Apr  8  2013 xml_data
+-rw-------  1 owaltari 5.0K Jun 23  2016 [01;31myerrorbar_plot.tar.gz[0m
+lrwxrwxrwx  1 owaltari   24 Apr 19 12:16 [01;36mZ-drive[0m -> [01;34m/home/ad/home/o/owaltari[0m
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ [H[2J]0;owaltari@whq-56: ~owaltari@whq-56:~$ cat "foo\n/[K\[Kbar\nbaz"
+cat: 'foo\nbar\nbaz': No such file or directory
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ cat "foo\nbar\nbaz"[1P[1P[1P "foo\nbar\nbaz"e "foo\nbar\nbaz"c "foo\nbar\nbaz"h "foo\nbar\nbaz"o "foo\nbar\nbaz"
+foo\nbar\nbaz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo "foo\nbar\nbaz"[C[C[C[C[C-"foo\nbar\nbaz"e"foo\nbar\nbaz" "foo\nbar\nbaz"
+foo
+bar
+baz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' f
+foo
+fff
+ffz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' f[K~[K^C
+foo
+^CC
+^Cz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' ^C\^C
+foo
+^CC
+^Cz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' \^C[C[Kc[1P^c
+foo
+^cc
+^cz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' ^c[K[K\000[K3
+foo
+003
+00z
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' \003[C[C[1P3[1P3[Ka
+foo
+aaa
+aaz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' \a\a
+foo
+
+z
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' \\a[K003
+foo
+
+z
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' \\003[1P3
+foo
+
+z
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' \\03[K[K[Kf
+foo
+fff
+ffz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' \f\f
+foo
+
+z
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' \\f[C[K[K[K[K[K[K[K[K[K[K[K[Ksed -e [K ''s'/'/'/'g'a//g'[C~/g'[1P/g'^/g'C/g'
+foo
+b^Cr
+b^Cz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | sed -e 's/a/^C/g'[C[C[1@-[1@i[1@ 
+sed: no input files
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | sed -i -e 's/a/^C/g'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[1P/g'A/g'
+foo
+b^Ar
+b^Az
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | sed -e 's/a/^A/g'i -e 's/a/^C/g'[3P[C[C[C[C[C[C[C[C[C[C[C[C[5Ptr 'bar' \\f[1Pf[C\fsed -e 's/a/^C/g'[5Ptr 'bar' \\f[C[K[K[K\\x01
+foo
+x01
+x0z
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' \\x01[C[Ka[K3
+foo
+x03
+x0z
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' \\x03[C[C[C[C'\\x03[C[C[C[C[C'[1P'[1P'[1P'[1P'[1P'-'[1P'C'-'v'[1P'c'
+foo
+CDE
+CDz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' 'C-c'[1P'x'
+foo
+CDE
+CDz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' 'C-x'[1P'a'
+foo
+CDE
+CDz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr 'bar' 'C-a'[1P'[C[C[C[C[C[1@-[1@d[1@ [C[C[C[C[C[C[C[C[C[C
+tr: extra operand ‘C-’
+Only one string may be given when deleting without squeezing repeats.
+Try 'tr --help' for more information.
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr -d 'bar' 'C-'c'
+tr: extra operand ‘C-c’
+Only one string may be given when deleting without squeezing repeats.
+Try 'tr --help' for more information.
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr -d 'bar' 'C-c'[1P'[1PC-'[1P-'[1P'[K[K
+foo
+
+z
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nbar\nbaz" | tr -d 'bar'[C[C[C[C[C[C[1P[1P 'bar'[1P'bar'[C[C[1Par'[1Pr'[1P'[C[1P[1P[1P[1@O[1@K[C[C[C[C[C[C[C[C[C[C[C[C[C[CO'K'[C f
+foo
+ff
+baz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz" | tr 'OK' f[C[K~[K^C
+foo
+^C
+baz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz" | tr 'OK' ^C"^C[1P^C'^C[C[C'
+foo
+^C
+baz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz" | tr 'OK' '^C'[C[1PC'[1P'\'0'0'3'
+foo
+
+baz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz" | tr 'OK' '\003'[2P^C'[C\003'[1P3'
+foo
+
+baz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz" | tr 'OK' '\03'[1P3'
+foo
+
+baz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz" | tr 'OK' '\3'[1@u[1@n[1P[1P[1@u[1@n[1@t[1@i[1@l[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P '\3'[1P'\3'[1P\3'[1P3'[1P'[Kgrep -[K"OK"; do :[K[K : [K; done
+[01;31m[KOK[m[K
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ until echo -e "foo\nOK\nbaz" | grep "OK"; do :; done[C[1@;[1@ [1@s[1P[1P[1P[C[C[1@$[1P[C[C[C[C[1@$[1@([C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@)
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+bash: foo: command not found
+^C
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ until $(echo -e "foo\nOK\nbaz") | grep "OK"; do :; done[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+foo
+OK
+baz
+bash: foo: command not found
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz"[C[C
+foo
+OK
+baz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz"
+foo
+OK
+baz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz"[C; sleep 1
+foo
+OK
+baz
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz"; sleep 10
+foo
+OK
+baz
+^[[A^[[H
+
+
+^C
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo -e "foo\nOK\nbaz"; sleep 10[1@([C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C) [K
+^C
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ $(echo -e "foo\nOK\nbaz"; sleep 10)[1@u[1@n[1@t[1@i[1@l[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | grep OK; don [K[K : ; done
+^C
+
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ until $(echo -e "foo\nOK\nbaz"; sleep 10) | grep OK; do : ; done[1@ 
+^C
+
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ until $(echo -e "foo\nOK\nbaz"; sleep 10) | grep OK ; do : ; done[C[1P[1@s[1@l[1@e[1@e[1@p[C[1@ [1@1
+^C
+
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ until $(echo -e "foo\nOK\nbaz"; sleep 10) | grep OK ; do sleep 1 ; done[1P[1P[1P[1P[1P[1@w[1@a[1@t[1@c[1@h[C[1@ [1@-[1@e[C[1@ [1P[1P[1P[1@"[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[C[1P[1P[1P[1P[1P[1P[1P[C[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K"
+[?1049h[1;49r(B[m[4l[?7h[H[2JEvery 2.0s: echo -e foo\nOK\nbaz  | grep OK[1;113HWed Oct 17 17:42:02 2018[3;1H-e foonOKnbaz[49;136H[1;131H4[49;136H[49;1H[?1049l[?1l>]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ cd[K[Kdc[K[Kfd[K[Kls
+total 241M
+-rw-------  1 owaltari 781M Mar 17  2014 [0m[01;31m2014-01-07-wheezy-raspbian.zip[0m
+-rw-------  1 owaltari  60K Dec  2  2015 2270_001.pdf
+drwx------  3 owaltari 4.0K May 12  2016 [01;34mACM[0m
+drwx------  2 owaltari 4.0K Sep 21  2017 [01;34macmart-master[0m
+drwx------  7 owaltari 4.0K Dec 22  2016 [01;34mActivePerl-5.24[0m
+-rw-------  1 owaltari  300 Feb 27  2013 adawdwad
+drwx------  3 owaltari 4.0K Sep 16  2015 [01;34mAndroid[0m
+drwx------  4 owaltari 4.0K Jun 23  2016 [01;34mandroid-binaries-hammerhead[0m
+-rw-------  1 owaltari 5.1K Jul  4  2016 Android_build_instructions.html
+-rw-------  1 owaltari  154 Jul  4  2016 Android_build_instructions.html~
+drwx------  3 owaltari 4.0K Feb 10  2017 [01;34mandroid_src[0m
+drwxrwxr-x  8 owaltari 4.0K Sep  4 13:54 [01;34mandroid-studio[0m
+drwxr-xr-x  8 owaltari 4.0K Oct 17 16:05 [01;34mAndroidStudioProjects[0m
+-rw-------  1 owaltari 119K Apr  2  2015 application.pdf
+-rw-------  1 owaltari   99 Nov  8  2012 bashtest.sh
+-rw-------  1 owaltari   91 Nov  8  2012 bashtest.sh~
+drwx------  4 owaltari 4.0K Sep 23  2016 [01;34mBCDC[0m
+drwx------  6 owaltari 4.0K Jun  9  2016 [01;34mbcdc-core[0m
+drwx------  3 owaltari 4.0K Feb 20  2017 [01;34mbcdc-game[0m
+-rw-------  1 owaltari  13M Oct 28  2014 [01;31mbikecad.rar[0m
+drwx------  2 owaltari 4.0K Jan 29  2018 [01;34mbin[0m
+drwx------  3 owaltari 4.0K Nov 14  2017 [01;34mbluetooth[0m
+drwx------  2 owaltari 4.0K Nov 23  2017 [01;34mbtcompanion[0m
+lrwxrwxrwx  1 owaltari   26 Feb  4  2014 [40;31;01mbus-bdt[0m -> [40;31;01m/fs/home/owaltari/bus-bdt/[0m
+-rw-------  1 owaltari  21K Sep 25  2015 capture.pcap
+-rw-------  1 owaltari  411 Apr  8  2013 ccnb_data
+drwx------  3 owaltari 4.0K Dec 13  2013 [01;34mccnr[0m
+drwx------  7 owaltari 4.0K Dec 13  2013 [01;34mCCNx[0m
+-rw-------  1 owaltari 1.7K Feb  5  2013 ccnx_repository_keystore
+drwx------  4 owaltari 4.0K Apr 17  2018 [01;34mCEC[0m
+drwx------  2 owaltari 4.0K Aug  5  2016 [01;34mcodegolf[0m
+drwx------  6 owaltari 4.0K Jan  5  2016 [01;34mCoNe[0m
+drwx------  2 owaltari 4.0K Mar  2  2017 [01;34mCoNe kuvat[0m
+-rw-------  1 owaltari   24 Sep 21  2015 CSC_tunnus
+lrwxrwxrwx  1 owaltari   18 Apr 24 10:55 [01;36mcs_home[0m -> [01;34m/cs/home/owaltari/[0m
+drwx------  2 owaltari 4.0K May 12  2014 [01;34mcsv[0m
+drwx------  2 owaltari 4.0K Mar 23  2015 [01;34mCV[0m
+drwx------  3 owaltari 4.0K Apr 16  2015 [01;34mdatasets[0m
+-rw-------  1 owaltari 2.5K Feb 27  2013 dbus_listener.c
+drwx------ 16 owaltari  12K Oct  8 10:43 [01;34mDesktop[0m
+drwx------  4 owaltari 4.0K Oct 27  2015 [01;34mdiff[0m
+drwx------  6 owaltari 4.0K Apr 17  2018 [01;34mDistSys[0m
+-rw-------  1 owaltari  175 Oct  4  2016 distsys_ssh-key_instructional.html
+-rw-------  1 owaltari  214 Oct  4  2016 distsys_ssh-key_instructional.html~
+-rw-------  1 owaltari 2.6K Sep 14  2016 distsys_ws2.txt
+-rw-------  1 owaltari 2.6K Sep 14  2016 distsys_ws2.txt~
+drwx------  3 owaltari 4.0K Oct  8 15:26 [01;34mDocuments[0m
+drwx------  2 owaltari  52K Oct 17 13:17 [01;34mDownloads[0m
+drwx------  6 owaltari 4.0K Sep  1  2017 [01;34mDropbox[0m
+drwx------  4 owaltari 4.0K Mar  2  2017 [01;34mdsp[0m
+drwx------  2 owaltari 4.0K Nov 16  2015 [01;34mdumpcap[0m
+drwx------  3 owaltari 4.0K Jan 17  2016 [01;34meggdrop[0m
+drwxr-xr-x  7 owaltari 4.0K Oct 23  2015 [01;34mEMC_Wi-Push_evaluations[0m
+-rw-------  1 owaltari  16M Oct  1  2015 [01;31mEval_backups.tar.gz[0m
+-rw-------  1 owaltari 8.3K Oct 25  2012 examples.desktop
+drwx------  2 owaltari 4.0K Jun 25  2014 [01;34meyeofthepi[0m
+-rw-------  1 owaltari  19K Oct 23  2015 [01;35mfigure_1.png[0m
+drwx------  4 owaltari 4.0K Mar 16  2016 [01;34mgithub[0m
+drwx------  3 owaltari 4.0K Mar  9  2016 [01;34mgnuplot_playground[0m
+drwx------  6 owaltari 4.0K Dec  2  2013 [01;34mgradu[0m
+-rw-------  1 owaltari 110K Nov  8  2012 [01;31mgraph.tar[0m
+drwx------  4 owaltari 4.0K Jan  2  2016 [01;34mHammerhead[0m
+drwx------  7 owaltari 4.0K Jan 20  2017 [01;34mHonor4X[0m
+drwx------  2 owaltari 4.0K Oct 27  2015 [01;34mhostapd[0m
+drwx------  2 owaltari 4.0K Jan 23  2017 [01;34mhtdocs[0m
+drwx------  3 owaltari 4.0K Mar 19  2015 [01;34mhtml[0m
+drwx------  2 owaltari 4.0K Apr  2  2014 [01;34mHumblebundle[0m
+-rw-------  1 owaltari   57 Mar 16  2016 igg_perks
+-rw-------  1 owaltari   27 Mar 16  2016 igg_perks~
+drwx------  3 owaltari 4.0K Jan 29  2013 [01;34minclude[0m
+drwx------  2 owaltari 4.0K Dec 13  2013 [01;34mindex[0m
+-rw-------  1 owaltari 9.1K Oct 10  2012 index.html
+drwx------  2 owaltari 4.0K Oct 15  2014 [01;34minstalltrx[0m
+drwx------  2 owaltari 4.0K Dec 14  2015 [01;34mInstructions_for_Utku[0m
+drwxr-xr-x  2 owaltari 4.0K Apr 19 19:29 [01;34mInternship presentation[0m
+drwxr-xr-x  5 owaltari 4.0K Dec 14  2015 [01;34mInternship_work[0m
+drwx------  5 owaltari 4.0K Aug 13  2014 [01;34mkdenlive[0m
+-rw-------  1 owaltari  520 Dec  7  2015 König_adapterit
+-rw-------  1 owaltari  464 Dec  7  2015 König_adapterit~
+-rw-------  1 owaltari  74M Mar  2  2017 [01;31mkuvat.tar[0m
+drwx------  2 owaltari 4.0K Jun 11 22:06 [01;34mLabConnect[0m
+drwx------  4 owaltari 4.0K Jan 24  2013 [01;34mLatex[0m
+drwx------  2 owaltari 4.0K Dec 13  2013 [01;34mlib[0m
+drwx------  3 owaltari 4.0K Dec  4  2013 [01;34mliberouter[0m
+-rw-------  1 owaltari   82 Dec 22  2015 linear_decrease.py
+-rw-------  1 owaltari   23 Dec 22  2015 linear_decrease.py~
+drwx------  2 owaltari 4.0K Apr 30  2014 [01;34mlooppi[0m
+drwx------  6 owaltari 4.0K Mar 16  2015 [01;34mmacmon[0m
+drwx------  4 owaltari 4.0K May 27  2016 [01;34mmacmonitor[0m
+-rw-------  1 owaltari 420K Mar 24  2016 [01;31mmacmonitor_old_airodump_implementation.tar[0m
+drwx------  2 owaltari 4.0K Jul  4  2016 [01;34mmobisys_matkalasku[0m
+drwx------  5 owaltari 4.0K Dec 16  2013 [01;34mmonc[0m
+drwx------  2 owaltari 4.0K Apr 13  2015 [01;34mmonitoring[0m
+-rw-------  1 owaltari 2.0K Nov 19  2012 motion_detector_dbus_capture.txt
+drwx------ 13 owaltari 4.0K Nov 12  2013 [01;34mMusic[0m
+drwx------  2 owaltari 4.0K May 30  2016 [01;34mnebula_sshfs[0m
+drwx------  5 owaltari 4.0K Nov 23  2012 [01;34mNetworkX[0m
+drwx------  5 owaltari 4.0K Mar  9  2016 [01;34mnode[0m
+drwx------ 12 owaltari 4.0K May 17  2016 [01;34mnode_modules[0m
+-rwxr-xr-x  1 owaltari  430 Jan 22  2014 [01;32mnoppa.py[0m
+-rwxr-xr-x  1 owaltari  179 Jan 22  2014 [01;32mnoppa.py~[0m
+drwx------  4 owaltari 4.0K Jan 29  2018 [01;34mopenshift[0m
+drwx------  2 owaltari 4.0K Nov  7  2014 [01;34mopintosuunnitelma[0m
+-rw-------  1 owaltari 429K Mar 21  2015 [01;31mopintosuunnitelma.tar.gz[0m
+-rw-------  1 owaltari 290K Sep 18  2014 [01;31mopintosuunnitelma_v0.2.tar[0m
+drwx------  5 owaltari 4.0K Nov 20  2013 [01;34moppnets[0m
+-rw-------  1 owaltari 4.5K Sep  3  2015 osoitteet.txt
+drwx------  2 owaltari 4.0K Feb  6  2015 [01;34moui[0m
+drwx------  6 owaltari 4.0K Feb 27  2017 [01;34mowaltari_ccn_in_iot[0m
+drwx------  6 owaltari 4.0K Feb 27  2017 [01;34mowaltari_wireless_shark[0m
+drwx------  4 owaltari 4.0K Jul 19 10:37 [01;34mPapers[0m
+drwx------  7 owaltari 4.0K Jun 15 17:02 [01;34mPictures[0m
+drwx------  3 owaltari 4.0K Feb  4  2014 [01;34mpiggybackbus[0m
+drwx------  2 owaltari 4.0K Dec  9  2014 [01;34mposteri[0m
+drwx------  4 owaltari 4.0K May 11  2015 [01;34mpresentation[0m
+drwx------  2 owaltari 4.0K Oct 25  2012 [01;34mPublic[0m
+drwx------  3 owaltari 4.0K Sep 11 16:54 [01;34mpython[0m
+drwx------  6 owaltari 4.0K Mar 13  2014 [01;34mquestionboard[0m
+drwxr-xr-x  1     1000 4.0K Oct 17 14:11 [01;34mraspberry[0m
+drwx------  3 owaltari 4.0K Dec 16  2015 [01;34mraspberry_tcpdump_monitor[0m
+drwx------  3 owaltari 4.0K Jun 27 13:11 [01;34mraspbian[0m
+drwx------  2 owaltari 4.0K Jan 17  2014 [01;34mreittiopas[0m
+-rw-------  1 owaltari  23M Sep 27  2013 [01;31mreittiopas.tar[0m
+-rw-------  1 owaltari 4.2K Oct 17  2016 research_ethics.txt
+drwx------  2 owaltari 4.0K Oct 10  2016 [01;34mScience_slam[0m
+drwx------  2 owaltari 4.0K Oct  7  2013 [01;34msed[0m
+-rwx------  1 owaltari 8.3K May  7  2014 [01;32msee[0m
+-rw-------  1 owaltari  105 May  7  2014 see.c
+drwx------  2 owaltari 4.0K Mar 11  2013 [01;34mShare[0m
+drwx------  2 owaltari 4.0K Jan 11  2017 [01;34msniffer[0m
+-rw-------  1 owaltari 3.5K May 31 16:43 snip_2015_11_26.pcap.pcapng
+-rw-------  1 owaltari  604 Feb 10  2014 Solmu.class
+-rw-------  1 owaltari  242 Feb 10  2014 Solmu.java
+-rw-------  1 owaltari  219 Feb 10  2014 Solmu.java~
+drwx------  2 owaltari 4.0K Jan 15  2015 [01;34msqlite[0m
+drwx------ 17 owaltari 4.0K Nov 27  2017 [01;34msrc[0m
+drwx------  2 owaltari 4.0K May 31  2017 [01;34msshfs[0m
+drwx------  3 owaltari 4.0K Feb 17  2017 [01;34mssid_leaking[0m
+drwx------  2 owaltari 4.0K Sep 17 14:04 [01;34mstatic_prongle[0m
+drwx------  4 owaltari 4.0K May 11  2015 [01;34msvn[0m
+drwx------ 11 owaltari 4.0K May 26  2016 [01;34mtcpdump_data_analyzer[0m
+-rw-------  1 owaltari 115M Oct 13  2017 [01;31mtcpdumps_from_macmonitor.tar[0m
+drwx------  2 owaltari 4.0K Oct 25  2012 [01;34mTemplates[0m
+drwx------ 12 owaltari 4.0K Mar 29  2018 [01;34mThere[0m
+drwx------  2 owaltari 4.0K Sep 30  2015 [01;34mtrafficgen[0m
+drwxrwxr-x  2 owaltari 4.0K Feb  5  2013 [01;34mUbuntu One[0m
+drwx------  2 owaltari 4.0K May 13  2016 [01;34mukko[0m
+-rwxr-xr-x  1 owaltari  182 Apr  3  2014 [01;32musbreset.sh[0m
+-rw-------  1 owaltari  135 Apr  3  2014 usbreset.sh~
+drwx------  2 owaltari 4.0K Feb 21  2013 [01;34muserdata[0m
+drwx--x---  1 owaltari  174 Sep 17 12:46 [01;34musers[0m
+drwx------  3 owaltari 4.0K Mar 17  2015 [01;34mvanilla_aircrack[0m
+drwx------  2 owaltari 4.0K Jan 29  2013 [01;34mVideos[0m
+drwx------  2 owaltari 4.0K Sep 16  2015 [01;34mVirtualBox VMs[0m
+drwx------  2 owaltari 4.0K Aug 31  2016 [01;34mVuokatin_data[0m
+drwx------  3 owaltari 4.0K Mar 17  2016 [01;34mwifeye-backend-server[0m
+drwx------ 10 owaltari 4.0K Mar 25  2018 [01;34mwifi_association_measurements[0m
+drwx------  4 owaltari 4.0K Mar 12  2015 [01;34mwifi_sniffing[0m
+drwx------  3 owaltari 4.0K Oct 27  2015 [01;34mwpa_supplicant_from_AOSP[0m
+drwx------  2 owaltari 4.0K Mar  9  2017 [01;34mwscinc[0m
+drwx------  3 owaltari 4.0K May 30  2016 [01;34mwww[0m
+-rw-------  1 owaltari 1.2K Apr  8  2013 xml_data
+-rw-------  1 owaltari 5.0K Jun 23  2016 [01;31myerrorbar_plot.tar.gz[0m
+lrwxrwxrwx  1 owaltari   24 Apr 19 12:16 [01;36mZ-drive[0m -> [01;34m/home/ad/home/o/owaltari[0m
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $!
+
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $![Kscree -[K[Kn -dm
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $!
+
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $![Kscreen -rd
+There are several suitable screens on:
+	19154..whq-56	(17/10/18 18:16:00)	(Detached)
+	17641.foobar	(17/10/18 18:09:18)	(Attached)
+Type "screen [-d] -r [pid.]tty.host" to resume one of them.
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ screen -rd[K
+WriteMessage: Bad file descriptor
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ screen -r 194[K154
+[!p[?3;4l[4l>[?1049h[4l[?1h=[0m(B[1;49r[H[2J[H[2J[25Bowaltari@whq-56:~$ [Kowaltari@whq-56:~$ 
+owaltari@whq-56:~$ 
+owaltari@whq-56:~$ [?5h[?5l[?5h[?5lexit
+exit
+[?1l>[49;1H
+[?1049l[screen is terminating]
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ screen -r 19154[Kd[3Pecho $!screen -dm[3Pecho $!screen -dm
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ screen -dmr 19154[Kd[3Pecho $!screen -rd[3Pecho $!
+
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $!screen -dm
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ screen -dm &
+[1] 19795
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ screen -dm &[K[3Pecho $!
+19795
+[1]+  Done                    screen -dm
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $!
+19795
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $!
+19795
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $!
+19795
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $!
+19795
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $!
+19795
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $!screen -dm &[5Pecho $![Kkillall screen
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ killall screen[7Pecho $!screen -dm &
+[1] 19868
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo $!
+19868
+[1]+  Done                    screen -dm
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ 
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ ex[K[Kkillall a[K[K[K[K[K[K[K[K[Kecho ‚[K&?
+[1] 19969
+
+bash: ?: command not found
+[1]+  Done                    echo
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ e[Ke[Ke[Ke[K
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ echo &?$!screen -dm &killall screen[2Pscreen -dm &killall screen
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ bc <<< "scale=2; 10*60"
+600
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ bc <<< "scale=2; 10*60"(10*60"[C[C[C[C[C)"
+600
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ bc <<< "scale=2; (10*60)"[C/"3"0"
+20.00
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ ail [K[K[K[Kmail otto.waltari@helsinki.fi "hello"
+Subject: hello there
+
+(Interrupt -- one more to kill letter)
+jhkjh
+nkjh
+
+(Interrupt -- one more to kill letter)
+"/home/owaltari/dead.letter" 2/11
+]0;owaltari@whq-56: ~owaltari@whq-56:~$ man mail
+[?1049h[?1h=S-NAIL(1)                                            BSD General Commands Manual                                           S-NAIL(1)[m
+[m
+[1mNAME[0m[m
+     [1mS-nail[0m [1m[v14.8.6][0m — send and receive Internet mail[m
+[m
+[1mSYNOPSIS[0m[m
+     [1ms-nail[0m [1m-h[0m | [1m--help[0m[m
+     [1ms-nail[0m [[1m-BDdEFintv~[0m] [[1m-A[0m [4maccount[24m] [[1m-a[0m [4mattachment[24m] [[1m-b[0m [4mbcc-addr[24m] [[1m-c[0m [4mcc-addr[24m] [[1m-q[0m [4mquote-file[24m] [[1m-r[0m [4mfrom-addr[24m][m
+            [[1m-S[0m [4mvariable[24m[=[4mvalue[24m]] [[1m-s[0m [4msubject[24m] [[1m-X[0m [4mcmd[24m] [[1m-.[0m] [4mto-addr[24m [4m...[24m [[1m--[0m [4mmta-option[24m [4m...[24m][m
+     [1ms-nail[0m [[1m-BDdEeHiNnRv~#[0m] [[1m-A[0m [4maccount[24m] [[1m-L[0m [4mspec-list[24m] [[1m-r[0m [4mfrom-addr[24m] [[1m-S[0m [4mvariable[24m[=[4mvalue[24m]] [[1m-X[0m [4mcmd[24m] [1m-f[0m [[4mfile[24m] [[1m--[0m [4mmta-option[24m [4m...[24m][m
+     [1ms-nail[0m [[1m-BDdEeHiNnRv~#[0m] [[1m-A[0m [4maccount[24m] [[1m-L[0m [4mspec-list[24m] [[1m-r[0m [4mfrom-addr[24m] [[1m-S[0m [4mvariable[24m[=[4mvalue[24m]] [[1m-u[0m [4muser[24m] [[1m-X[0m [4mcmd[24m] [[1m--[0m [4mmta-option[24m [4m...[24m][m
+[m
+[1mDESCRIPTION[0m[m
+           [1mCompatibility[0m [1mnote:[0m S-nail and part of its configuration syntax will change in v15.0.  Until then there will exist a par‐[m
+           tial but growing number of backward and forward compatibility configuration options.  To choose the new syntax and behav‐[m
+           iour already today, the binary option [4mv15-compat[24m must be set.  The manual will refer  to  it  via  [v15-compat]  and  [no[m
+           v15-compat] as necessary.  Commands and variables which will vanish in v15.0 are marked [Obsolete].[m
+[m
+     S-nail is a mail processing system with a command syntax reminiscent of ed(1) with lines replaced by messages.  It is intended[m
+     to provide the functionality of the POSIX mailx(1) command and offers (mostly optional) extensions for line editing, IDNA,[m
+     MIME, S/MIME, SMTP and POP3 (and IMAP).  It is usable as a mail batch language.[m
+[m
+   [1mOptions[0m[m
+     [1m-A[0m [4maccount[24m  Executes an [1maccount[0m command (see below) for [4maccount[24m after the startup files have been read.[m
+[m
+     [1m-a[0m [4mfile[24m     Attach the given file to the message.  The same filename conventions as described in the section [4mCOMMANDS[24m apply:[m
+                 shell word expansion is restricted to the tilde ‘~’ and variables.  Shall [4mfile[24m not be accessible but contain a ‘=’[m
+                 character, then anything after the ‘=’ is assumed to specify the input character set and anything before ‘=’ the[m
+                 filename: this is the only option to specify the input character set (and don't perform any character set conver‐[m
+                 sion) for text attachments from the command line, not using the [1m~@[0m tilde escape command.[m
+[m
+     [1m-B[0m          Make standard input and standard output line-buffered.[m
+[m
+     [1m-b[0m [4maddress[24m  Send blind carbon copies to the given list of addresses.  [4mSending[24m [4mmail[24m below goes into more detail on that.[m
+[m
+     [1m-c[0m [4maddress[24m  Send carbon copies to the given list of addresses.[m
+[m
+     [1m-D[0m          [Option] Set the [4mdisconnected[24m variable.[m
+[m
+     [1m-d[0m          Set the [4mdebug[24m variable, which enables debug messages and disables message delivery.[m
+[m
+     [1m-E[0m          Set the [4mskipemptybody[24m variable and thus discard messages with an empty message part body.  This is useful for send‐[m
+                 ing messages from scripts.[m
+[m
+     [1m-e[0m          Just check if mail is present in the system mailbox.  If yes, return an exit status of zero, a non-zero value oth‐[m
+                 erwise.[m
+[m
+     [1m-F[0m          Save the message to send in a file named after the local part of the first recipient's address (instead of in[m
+[7m Manual page mail(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [4mrecord[24m).[m
+[7m Manual page mail(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-f[0m [[4mfile[24m]   Read in the contents of the user's MBOX (or the specified file) for processing; when S-nail is quit, it writes[m
+[7m Manual page mail(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 undeleted messages back to this file (but be aware of the [4mhold[24m option).  Some special conventions are recognized[m
+[7m Manual page mail(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 for the string [4mfile[24m which are documented for the [1mfile[0m command below.  Note that [4mfile[24m is not a direct argument to[m
+[7m Manual page mail(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 the flag [1m-f[0m, but is instead taken from the command line after option processing has been completed.  In order to[m
+[7m Manual page mail(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 use a [4mfile[24m that starts with a hyphen, prefix it with a (relative) path, as in ‘./-hyphenbox.mbox’.[m
+[7m Manual page mail(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-H[0m          Print a header summary of all messages and exit.  A configurable summary view is available via the [1m-L[0m option.[m
+[7m Manual page mail(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-h[0m          Print a short usage summary.  Because of widespread use a [1m--help[0m argument will have the same effect.[m
+[7m Manual page mail(1) line 12 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 13 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-i[0m          Set the [4mignore[24m variable to ignore tty interrupt signals.[m
+[7m Manual page mail(1) line 14 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 15 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-L[0m [4mspec-list[24m[m
+[7m Manual page mail(1) line 16 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 Print a header summary of only those messages that match the given [4mspec-list[24m, then exit.  See the section[m
+[7m Manual page mail(1) line 17 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [4mSpecifying[24m [4mmessages[24m for the format of [4mspec-list[24m.  If the [1m-H[0m option has been given in addition no header summary is[m
+[7m Manual page mail(1) line 18 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 produced, but S-nail will instead indicate via its exit status wether [4mspec-list[24m matched any messages (‘0’) or not[m
+[7m Manual page mail(1) line 19 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 (‘1’); note that any verbose output is suppressed in this mode and must instead be enabled explicitly (e.g., by[m
+[7m Manual page mail(1) line 20 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 using the option [1m-v[0m).[m
+[7m Manual page mail(1) line 21 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 22 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-N[0m          Unset the [4mheader[24m variable and thus inhibit initial display of message headers when reading mail or editing a mail[m
+[7m Manual page mail(1) line 23 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 folder.[m
+[7m Manual page mail(1) line 24 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 25 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-n[0m          Inhibits reading [4ms-nail.rc[24m upon startup.  This option should be activated for S-nail scripts that are invoked on[m
+[7m Manual page mail(1) line 26 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 more than one machine, because the contents of that file may differ between them.  (The same behaviour can be[m
+[7m Manual page mail(1) line 27 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 achieved by setting the NAIL_NO_SYSTEM_RC environment variable.)[m
+[7m Manual page mail(1) line 28 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 29 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-q[0m [4mfile[24m     Start the message with the contents of the specified file.  May be given in send mode only.[m
+[7m Manual page mail(1) line 30 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 31 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-R[0m          Any folder opened will be in read-only mode.[m
+[7m Manual page mail(1) line 32 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 33 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-r[0m [4maddress[24m  If [4maddress[24m is a valid address then it specifies the envelope sender address to be passed to the MTA as ‘-f [4maddress[24m’[m
+[7m Manual page mail(1) line 34 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 when a message is send.  Shall [4maddress[24m include a user name, comments etc., then the components will be separated[m
+[7m Manual page mail(1) line 35 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 and the name part will be passed to the MTA individually via ‘-F [4mname[24m’.  The given [4maddress[24m will also be assigned to[m
+[7m Manual page mail(1) line 36 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 the [4mfrom[24m variable, just as if additionally ‘-Sfrom=address’ had been specified (therefore affecting SMTP data[m
+[7m Manual page mail(1) line 37 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 transfer, too).[m
+[7m Manual page mail(1) line 38 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 39 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 If instead an empty string is passed as [4maddress[24m then the content of the variable [4mfrom[24m will be evaluated and used[m
+[7m Manual page mail(1) line 40 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 for this purpose whenever the MTA is contacted.  Note that S-nail by default, without [1m-r[0m that is, neither passes[m
+[7m Manual page mail(1) line 41 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 ‘-f’ nor ‘-F’ flags to the MTA by itself.[m
+[7m Manual page mail(1) line 42 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 43 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-S[0m [4mvariable[24m[=value][m
+[7m Manual page mail(1) line 44 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 Sets the internal option [4mvariable[24m and, in case of a value option, assigns [4mvalue[24m to it.  Even though options set via[m
+[7m Manual page mail(1) line 45 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [1m-S[0m may be overwritten from within resource files, the command line setting will be reestablished after all resource[m
+[7m Manual page mail(1) line 46 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 files have been loaded.[m
+[7m Manual page mail(1) line 47 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 48 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-s[0m [4msubject[24m  Specify the subject of the to-be-sent message.[m
+[7m Manual page mail(1) line 49 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 50 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-t[0m          The message to be sent is expected to contain a message header with ‘To:’, ‘Cc:’, or ‘Bcc:’ fields giving its[m
+[7m Manual page mail(1) line 51 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 recipients, which will be added to those given on the command line.  If a message subject is specified via[m
+[7m Manual page mail(1) line 52 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 ‘Subject:’ then it'll be used in favour of one given on the command line.[m
+[7m Manual page mail(1) line 53 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 54 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 Also understood are ‘Reply-To:’ (possibly overriding [4mreplyto[24m), ‘Sender:’ (p. o. [4msender[24m), ‘Organization:’ (p. o.[m
+[7m Manual page mail(1) line 55 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [4mORGANIZATION[24m).  Note you can also specify ‘From:’, possibly overriding [4mfrom[24m and the envelope address possibly spec‐[m
+[7m Manual page mail(1) line 56 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 ified with the option [1m-r[0m![m
+[7m Manual page mail(1) line 57 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 58 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 The following, which are normally created automatically based upon the message context, can also be specified:[m
+[7m Manual page mail(1) line 59 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 ‘Message-ID:’, ‘In-Reply-To:’, ‘References:’ and ‘Mail-Followup-To:’ (special address massage will however still[m
+[7m Manual page mail(1) line 60 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 occur for the latter).[m
+[7m Manual page mail(1) line 61 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 62 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-u[0m [4muser[24m     Read the system mailbox of [4muser[24m (appropriate privileges presumed), and “assume to be” [4muser[24m in some aspects, e.g. in[m
+[7m Manual page mail(1) line 63 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 respect to [1mfile[0m–expansions of ‘%’ etc.; also see USER.[m
+[7m Manual page mail(1) line 64 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 65 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-V[0m          Print S-nail's version and exit.[m
+[7m Manual page mail(1) line 66 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 67 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-v[0m          Setting the [4mverbose[24m option causes some verbosity (like printing of certificate chains).  Using it twice increases[m
+[7m Manual page mail(1) line 68 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 the level of verbosity.[m
+[7m Manual page mail(1) line 69 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 70 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-X[0m [4mcmd[24m      Add the given [4mcmd[24m to the list of commands to be executed before normal operation starts.  Correlates with [1m-#[0m and[m
+[7m Manual page mail(1) line 71 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [4mbatch-exit-on-error[24m; the only possibility to execute commands in non-interactive mode when reading startup files is[m
+[7m Manual page mail(1) line 72 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 actively prohibited.[m
+[7m Manual page mail(1) line 73 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 74 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-~[0m          Enable [4mTILDE[24m [4mESCAPES[24m even if not in interactive mode.[m
+[7m Manual page mail(1) line 75 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 76 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-#[0m          This sets several options to prepare S-nail for working in (most likely non-interactive) batch mode: [4mdot[24m,[m
+[7m Manual page mail(1) line 77 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 [4memptystart[24m, no[4mheader[24m, [4mquiet[24m, [4msendwait[24m, as well as MBOX and [4mfolder[24m (both to [4m/dev/null[24m).  It also enables processing[m
+[7m Manual page mail(1) line 78 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 of [4mTILDE[24m [4mESCAPES[24m.  E.g., the following should send an email message to “bob”:[m
+[7m Manual page mail(1) line 79 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 80 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                       $ LC_ALL=C printf 'm bob\n~s ubject\nText\n.\nx\n' | \[m
+[7m Manual page mail(1) line 81 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                         LC_ALL=C MAILRC=/dev/null s-nail -n -# -Snosave[m
+[7m Manual page mail(1) line 82 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 83 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [1m-.[0m          This flag forces termination of option processing in order to prevent “option injection” (attacks).  It also force‐[m
+[7m Manual page mail(1) line 84 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K                 fully puts S-nail into send mode, see [4mSending[24m [4mmail[24m.[m
+[7m Manual page mail(1) line 85 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 86 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     In the above list of supported command line options, [1m-D[0m, [1m-d[0m, [1m-E[0m, [1m-i[0m, [1m-N[0m and [1m-v[0m are implemented by means of setting the respec‐[m
+[7m Manual page mail(1) line 87 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     tive option, as via [1m-S[0m.  [[4mmta-option[24m [4m...[24m] arguments that are given at the end of the command line after a ‘--’ separator will[m
+[7m Manual page mail(1) line 88 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     be passed through to the mail-transfer-agent (MTA) and persist for an entire (interactive) session – if the setting of[m
+[7m Manual page mail(1) line 89 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     [4mexpandargv[24m allows their recognition; MTA arguments can also be specified in the variable [4msendmail-arguments[24m; find MTA interac‐[m
+[7m Manual page mail(1) line 90 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     tion described in more detail in the documentation of [4msendmail[24m.  MTA arguments are ignored when mail is send via SMTP data[m
+[7m Manual page mail(1) line 91 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     transfer.[m
+[7m Manual page mail(1) line 92 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page mail(1) line 93 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K   [1mA[0m [1mstarter[0m[m
+[7m Manual page mail(1) line 94 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K     S-nail is a direct descendant of the BSD Mail program
