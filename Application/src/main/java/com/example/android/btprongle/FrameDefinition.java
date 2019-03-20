@@ -9,9 +9,9 @@ public interface FrameDefinition {
     int PAYLOAD = 4;
 
     // Debug specific message types 1xx
-    //public static final int DEBUG = 100;
-    //public static final int DEBUG_PING = 101;
-    //public static final int DEBUG_PONG = 102;
+    int DEBUG = 100;
+    int DEBUG_PING = 101;
+    int DEBUG_PONG = 102;
 
     // Local link (Android <--> Prongle) specific message types 2xx
     int LOCAL = 200;
