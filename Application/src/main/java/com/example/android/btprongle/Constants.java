@@ -21,15 +21,18 @@ package com.example.android.btprongle;
  */
 public interface Constants {
 
-    // Message types sent from the BluetoothService Handler
-    public static final int MESSAGE_STATE_CHANGE = 1;
-    public static final int MESSAGE_READ = 2;
-    public static final int MESSAGE_WRITE = 3;
-    public static final int MESSAGE_DEVICE_NAME = 4;
-    public static final int MESSAGE_TOAST = 5;
+    // FrameDefinition types sent from the BluetoothService Handler
+    int MESSAGE_STATE_CHANGE = 1;
+    int MESSAGE_READ = 2;
+    int MESSAGE_WRITE = 3;
+    int MESSAGE_DEVICE_NAME = 4;
+    int MESSAGE_TOAST = 5;
 
     // Key names received from the BluetoothService Handler
-    public static final String DEVICE_NAME = "device_name";
-    public static final String TOAST = "toast";
+    String DEVICE_NAME = "device_name";
+    String TOAST = "toast";
 
+    // Miscellaneous constants
+    String SHARED_PREFERENCES = "btprongle_prefs";
+    String LOG_FOLDER = "btprongle";
 }

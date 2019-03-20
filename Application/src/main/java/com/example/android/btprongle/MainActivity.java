@@ -17,16 +17,12 @@
 
 package com.example.android.btprongle;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
-import android.view.MenuItem;
-
 
 import com.example.android.common.activities.SampleActivityBase;
-import com.example.android.common.logger.Log;
-import com.example.android.common.logger.LogFragment;
-import com.example.android.common.logger.LogWrapper;
 
 
 /**
@@ -39,6 +35,7 @@ import com.example.android.common.logger.LogWrapper;
 public class MainActivity extends SampleActivityBase {
 
     public static final String TAG = "MainActivity";
+    public static Context contextOfApplication;
 
     // Whether the Log Fragment is currently shown
     //private boolean mLogShown;
@@ -47,7 +44,7 @@ public class MainActivity extends SampleActivityBase {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        contextOfApplication = getApplicationContext();
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             BluetoothFragment fragment = new BluetoothFragment();
@@ -60,6 +57,9 @@ public class MainActivity extends SampleActivityBase {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+    public static Context getContextOfApplication(){
+        return contextOfApplication;
     }
 
     /*

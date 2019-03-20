@@ -50,7 +50,7 @@ public class LogWrapper implements LogNode {
      */
     @Override
     public void println(int priority, String tag, String msg, Throwable tr) {
-        // There actually are log methods that don't take a msg parameter.  For now,
+        // There actually are log methods that don't take a FrameDefinition parameter.  For now,
         // if that's the case, just convert null to the empty string and move on.
         String useMsg = msg;
         if (useMsg == null) {
@@ -58,7 +58,7 @@ public class LogWrapper implements LogNode {
         }
 
         // If an exeption was provided, convert that exception to a usable string and attach
-        // it to the end of the msg method.
+        // it to the end of the FrameDefinition method.
         if (tr != null) {
             msg += "\n" + Log.getStackTraceString(tr);
         }

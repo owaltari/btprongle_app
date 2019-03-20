@@ -4,7 +4,7 @@
             "outputFile": "/home/owaltari/AndroidStudioProjects/BTprongle/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "/home/owaltari/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/5754d6fcc413a12a53074992cf0b7a64/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "source": "/home/owaltari/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/682b011f9689d46b56d774682925adfa/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

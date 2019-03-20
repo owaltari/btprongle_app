@@ -31,4 +31,13 @@
         android:showAsAction="never"
         android:title="@string/discoverable"/>
 
+    <item
+        android:id="@+id/meshpingtest"
+        android:showAsAction="never"
+        android:title="Ping test"/>
+    <item
+        android:id="@+id/localpingtest"
+        android:showAsAction="never"
+        android:title="Local ping test"/>
+
 </menu>

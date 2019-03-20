@@ -4,7 +4,7 @@
             "outputFile": "/home/owaltari/AndroidStudioProjects/BTprongle/Application/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fa/values-fa.xml",
             "map": [
                 {
-                    "source": "/home/owaltari/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/5754d6fcc413a12a53074992cf0b7a64/res/values-fa/values-fa.xml",
+                    "source": "/home/owaltari/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/682b011f9689d46b56d774682925adfa/res/values-fa/values-fa.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/owaltari/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/8a6b2ec6d0dbfa995be710c5321306f0/res/values-fa/values-fa.xml",
+                    "source": "/home/owaltari/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/cb43e2480c129f7254a9a824400781e2/res/values-fa/values-fa.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

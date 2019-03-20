@@ -21,6 +21,7 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothServerSocket;
 import android.bluetooth.BluetoothSocket;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -49,10 +50,10 @@ public class BluetoothService {
     // Unique UUID for this application
     private static final UUID MY_UUID_SECURE =
             UUID.fromString("94f39d29-7d6d-437d-973b-fba39e49d4ee");
-            //UUID.fromString("fa87c0d0-afac-11de-8a39-0800200c9a66"); non-default serial UUID
+    //UUID.fromString("fa87c0d0-afac-11de-8a39-0800200c9a66"); non-default serial UUID
     private static final UUID MY_UUID_INSECURE =
             UUID.fromString("94f39d29-7d6d-437d-973b-fba39e49d4ee");
-            //UUID.fromString("8ce255c0-200a-11e0-ac64-0800200c9a66"); non-default serial UUID
+    //UUID.fromString("8ce255c0-200a-11e0-ac64-0800200c9a66"); non-default serial UUID
 
     // Member fields
     private final BluetoothAdapter mAdapter;
@@ -63,6 +64,8 @@ public class BluetoothService {
     private ConnectedThread mConnectedThread;
     private int mState;
     private int mNewState;
+
+    private SharedPreferences prefs;
 
     // Constants that indicate the current connection state
     public static final int STATE_NONE = 0;       // we're doing nothing
@@ -81,6 +84,7 @@ public class BluetoothService {
         mState = STATE_NONE;
         mNewState = mState;
         mHandler = handler;
+        prefs = context.getSharedPreferences(Constants.SHARED_PREFERENCES, Context.MODE_PRIVATE);
     }
 
     /**
@@ -129,6 +133,15 @@ public class BluetoothService {
         if (mInsecureAcceptThread == null) {
             mInsecureAcceptThread = new AcceptThread(false);
             mInsecureAcceptThread.start();
+        }
+
+        if (prefs.getBoolean("firstLogin", true)) {
+            Log.d(TAG, "first login > sharedPreferences created");
+            SharedPreferences.Editor editor = prefs.edit();
+            final String instanceID = UUID.randomUUID().toString();
+            editor.putBoolean("firstLogin", false);
+            editor.putString("instanceID", instanceID);
+            editor.apply();
         }
         // Update UI title
         updateUserInterfaceTitle();

@@ -16,15 +16,19 @@
 
 package com.example.android.btprongle;
 
+import android.Manifest;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.KeyEvent;
@@ -44,6 +48,8 @@ import android.widget.Toast;
 
 import com.example.android.common.logger.Log;
 
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * This fragment controls Bluetooth to communicate with other devices.
@@ -57,11 +63,18 @@ public class BluetoothFragment extends Fragment {
     private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
     private static final int REQUEST_ENABLE_BT = 3;
 
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+
     // Layout Views
     private ListView mConversationView;
     private EditText mOutEditText;
     private Button mSendButton;
-    private TextView mStatusView;
+    //private TextView mStatusView;
+
+    private Context applicationContext = MainActivity.getContextOfApplication();
+    private LatencyLogger latencyLogger = new LatencyLogger();
+    private SharedPreferences prefs;
     /**
      * Name of the connected device
      */
@@ -102,6 +115,23 @@ public class BluetoothFragment extends Fragment {
         }
     }
 
+    /**
+     * Request for permissions to write on external storage. Interacts with the user only initially.
+     *
+     * @param activity
+     */
+    public static void verifyStoragePermissions(Activity activity) {
+        // Check if we have write permission
+        int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            // We don't have permission so prompt the user
+            ActivityCompat.requestPermissions(
+                    activity,
+                    PERMISSIONS_STORAGE,
+                    REQUEST_EXTERNAL_STORAGE
+            );
+        }
+    }
 
     @Override
     public void onStart() {
@@ -115,6 +145,12 @@ public class BluetoothFragment extends Fragment {
         } else if (mService == null) {
             setupConn();
         }
+
+        Log.d(TAG, "BluetoothFragment onStart()");
+        prefs = applicationContext.getSharedPreferences(Constants.SHARED_PREFERENCES, Context.MODE_PRIVATE);
+        Log.d(TAG, prefs.getString("instanceID", "DID NOT WORK"));
+
+        verifyStoragePermissions(getActivity());
     }
 
     @Override
@@ -149,10 +185,10 @@ public class BluetoothFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        mConversationView = (ListView) view.findViewById(R.id.in);
-        mOutEditText = (EditText) view.findViewById(R.id.edit_text_out);
-        mSendButton = (Button) view.findViewById(R.id.button_send);
-        mStatusView = (TextView) view.findViewById(R.id.status_view);
+        mConversationView = view.findViewById(R.id.in);
+        mOutEditText = view.findViewById(R.id.edit_text_out);
+        mSendButton = view.findViewById(R.id.button_send);
+        //mStatusView = (TextView) view.findViewById(R.id.status_view);
     }
 
     /**
@@ -175,7 +211,7 @@ public class BluetoothFragment extends Fragment {
                 // Send a message using content of the edit text widget
                 View view = getView();
                 if (null != view) {
-                    TextView textView = (TextView) view.findViewById(R.id.edit_text_out);
+                    TextView textView = view.findViewById(R.id.edit_text_out);
                     String message = textView.getText().toString();
                     sendMessage(message);
                 }
@@ -185,7 +221,7 @@ public class BluetoothFragment extends Fragment {
         mService = new BluetoothService(getActivity(), mHandler);
 
         // Initialize the buffer for outgoing messages
-        mOutStringBuffer = new StringBuffer("");
+        mOutStringBuffer = new StringBuffer();
     }
 
     /**
@@ -201,9 +237,50 @@ public class BluetoothFragment extends Fragment {
     }
 
     /**
-     * Sends a message.
+     * This function is called in return when receiving a ping.
      *
-     * @param message A string of text to send.
+     * @param ping Incoming ping frame
+     */
+    private void sendPong(Frame ping) {
+        // Generate a pong reply in exchange for a ping
+        Frame pong = new Frame(FrameDefinition.MESH_PONG);
+
+        pong.setDst(ping.getSrc());
+        pong.setPayload("sent", ping.getPayload("sent"));
+
+        if (!pong.getSrc().equals(pong.getDst())) {
+            // Don't send pongs where src == dst
+            //mService.write(pong.toBytes());
+        }
+        mService.write(pong.toBytes());
+    }
+
+    private void logPong(Frame pong) {
+        // After receiving a pong calculate latency and make a log entry
+        long recvTime = System.currentTimeMillis();
+        long sendTime = (Long) pong.getPayload("sent");
+        long rtt = recvTime - sendTime;
+
+        Log.d(TAG, "pong received, rtt (ms) = "+rtt);
+        latencyLogger.writeString("mesh_ping", rtt);
+
+    }
+
+    private void logEcho(Frame echo) {
+        long recvTime = System.currentTimeMillis();
+        long sendTime = (Long) echo.getPayload("sent");
+        long local_rtt = recvTime - sendTime;
+
+        Log.d(TAG, "local echo reply, rtt (ms) = "+local_rtt);
+        latencyLogger.writeString("local_echo", local_rtt);
+    }
+
+    /**
+     * Sends a message. As of now, all usertext messages are wrapped into JSON objects
+     * for simplicity's sake.
+     *
+     * @param message A string of text to send. This string is wrapped
+     *                into a JSON object by the key "text"
      */
     private void sendMessage(String message) {
         // Check that we're actually connected before trying anything
@@ -214,9 +291,11 @@ public class BluetoothFragment extends Fragment {
 
         // Check that there's actually something to send
         if (message.length() > 0) {
-            // Get the message bytes and tell the BluetoothService to write
-            byte[] send = message.getBytes();
-            mService.write(send);
+            Frame frame = new Frame(FrameDefinition.USERTEXT_JSON);
+            frame.setDst("bcast");
+            frame.setPayload("text", message);
+
+            mService.write(frame.toBytes());
 
             // Reset out string buffer to zero and clear the edit text field
             mOutStringBuffer.setLength(0);
@@ -278,7 +357,7 @@ public class BluetoothFragment extends Fragment {
      */
     private final Handler mHandler = new Handler() {
         @Override
-        public void handleMessage(Message msg) {
+        public void handleMessage(android.os.Message msg) {
             FragmentActivity activity = getActivity();
             switch (msg.what) {
                 case Constants.MESSAGE_STATE_CHANGE:
@@ -300,33 +379,51 @@ public class BluetoothFragment extends Fragment {
                     byte[] writeBuf = (byte[]) msg.obj;
                     // construct a string from the buffer
                     String writeMessage = new String(writeBuf);
-                    mConversationArrayAdapter.add("Me:  " + writeMessage);
+                    mConversationArrayAdapter.add("Outgoing:\n" + writeMessage);
                     break;
                 case Constants.MESSAGE_READ:
                     byte[] readBuf = (byte[]) msg.obj;
                     // construct a string from the valid bytes in the buffer
-                    String readMessage = new String(readBuf, 0, msg.arg1);
+                    //String readMessage = new String(readBuf, 0, msg.arg1);
 
-                    mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
+                    try {
+                        /**
+                         * Incoming frames land here. Use frame ID field to treat them respectively.
+                         */
+                        Frame incoming = new Frame(new String(readBuf, 0, msg.arg1));
+                        mConversationArrayAdapter.add("Incoming from " + mConnectedDeviceName + ":\n" + incoming.toString());
+                        switch (incoming.getID()) {
+                            // Message handling
+                            case FrameDefinition.MESH_PING:
+                                // Reply with a PONG
+                                sendPong(incoming);
+                                break;
 
-                    String rdmsg = readMessage.replaceAll(System.getProperty("line.separator"), "").trim();
+                            case FrameDefinition.MESH_PONG:
+                                // Check if I sent the ping. If so, calculate latency.
+                                logPong(incoming);
+                                break;
 
-                    int color = 0;
+                            // Control message handling - Not yet used for anything
+                            case FrameDefinition.LOCAL_ECHO:
+                                logEcho(incoming);
+                                break;
 
-                    if (rdmsg.equals("red")) {
-                        color = 0xffff0000;
-                    } else if (rdmsg.equals("green")) {
-                        color = 0xff00ff00;
-                    } else if (rdmsg.equals("blue")) {
-                        color = 0xff0000ff;
+                            // Usertext message handling - Plain payloads
+                            case FrameDefinition.USERTEXT:
+                                //mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + incoming.toString());
+                                break;
+
+                            // Usertext message handling - JSON payloads
+                            case FrameDefinition.USERTEXT_JSON:
+                                //mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + incoming.toString());
+                                break;
+                        }
+
+                    } catch (Throwable t) {
+                        mConversationArrayAdapter.add("Could not parse incoming JSON.");
+                        //Log.e("My App", "Could not parse malformed JSON: \"" + json + "\"");
                     }
-
-                    //Random rnd = new Random();
-                    //int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-                    if (color != 0) {
-                        mStatusView.setBackgroundColor(color);
-                    }
-                    //mOutEditText.setBackgroundColor(color);
 
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
@@ -415,6 +512,20 @@ public class BluetoothFragment extends Fragment {
             case R.id.discoverable: {
                 // Ensure this device is discoverable by others
                 ensureDiscoverable();
+                return true;
+            }
+            case R.id.meshpingtest: {
+                // Ensure this device is discoverable by others
+                ScheduledThreadPoolExecutor exec = new ScheduledThreadPoolExecutor(1);
+                long delay = 5;
+                exec.scheduleWithFixedDelay(new PingTest(applicationContext, mService, FrameDefinition.MESH_PING), 0, delay, TimeUnit.SECONDS);
+                return true;
+            }
+            case R.id.localpingtest: {
+                // Ensure this device is discoverable by others
+                ScheduledThreadPoolExecutor exec = new ScheduledThreadPoolExecutor(1);
+                long delay = 5;
+                exec.scheduleWithFixedDelay(new PingTest(applicationContext, mService, FrameDefinition.LOCAL_ECHO), 0, delay, TimeUnit.SECONDS);
                 return true;
             }
         }

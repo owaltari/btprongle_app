@@ -496,6 +496,7 @@
     <string name="none_found">No devices found</string>
     <string name="none_paired">No devices have been paired</string>
     <string name="not_connected">You are not connected to a device</string>
+    <string name="pingtest_over">Pingtest over</string>
     <string name="scanning">scanning for devices...</string>
     <string name="search_menu_title">Search</string>
     <string name="secure_connect">Connect a device - Secure</string>
