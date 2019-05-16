@@ -73,7 +73,7 @@ public class BluetoothFragment extends Fragment {
     //private TextView mStatusView;
 
     private Context applicationContext = MainActivity.getContextOfApplication();
-    private LatencyLogger latencyLogger = new LatencyLogger();
+    private ApplicationLogger applicationLogger = new ApplicationLogger();
     private SharedPreferences prefs;
     /**
      * Name of the connected device
@@ -247,7 +247,7 @@ public class BluetoothFragment extends Fragment {
 
         pong.setDst(ping.getSrc());
         pong.setPayload("sent", ping.getPayload("sent"));
-
+        pong.setPayload("pingnonce", ping.getNonce());
         if (!pong.getSrc().equals(pong.getDst())) {
             // Don't send pongs where src == dst
             //mService.write(pong.toBytes());
@@ -262,7 +262,7 @@ public class BluetoothFragment extends Fragment {
         long rtt = recvTime - sendTime;
 
         Log.d(TAG, "pong received, rtt (ms) = "+rtt);
-        latencyLogger.writeString("mesh_ping", rtt);
+        applicationLogger.writeLong("mesh_ping", rtt);
 
     }
 
@@ -272,7 +272,14 @@ public class BluetoothFragment extends Fragment {
         long local_rtt = recvTime - sendTime;
 
         Log.d(TAG, "local echo reply, rtt (ms) = "+local_rtt);
-        latencyLogger.writeString("local_echo", local_rtt);
+        applicationLogger.writeLong("local_echo", local_rtt);
+    }
+
+    private void logIncomingMessage(Frame message) {
+        applicationLogger.writeString("incoming", message.toSimpleString());
+    }
+    private void logOutgoingMessage(Frame message) {
+        applicationLogger.writeString("outgoing", message.toSimpleString());
     }
 
     /**
@@ -294,6 +301,7 @@ public class BluetoothFragment extends Fragment {
             Frame frame = new Frame(FrameDefinition.USERTEXT_JSON);
             frame.setDst("bcast");
             frame.setPayload("text", message);
+            logOutgoingMessage(frame);
 
             mService.write(frame.toBytes());
 
@@ -416,6 +424,7 @@ public class BluetoothFragment extends Fragment {
 
                             // Usertext message handling - JSON payloads
                             case FrameDefinition.USERTEXT_JSON:
+                                logIncomingMessage(incoming);
                                 //mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + incoming.toString());
                                 break;
                         }
@@ -517,14 +526,14 @@ public class BluetoothFragment extends Fragment {
             case R.id.meshpingtest: {
                 // Ensure this device is discoverable by others
                 ScheduledThreadPoolExecutor exec = new ScheduledThreadPoolExecutor(1);
-                long delay = 5;
+                long delay = Constants.PINGTEST_INTERVAL_SECONDS;
                 exec.scheduleWithFixedDelay(new PingTest(applicationContext, mService, FrameDefinition.MESH_PING), 0, delay, TimeUnit.SECONDS);
                 return true;
             }
             case R.id.localpingtest: {
                 // Ensure this device is discoverable by others
                 ScheduledThreadPoolExecutor exec = new ScheduledThreadPoolExecutor(1);
-                long delay = 5;
+                long delay = Constants.PINGTEST_INTERVAL_SECONDS;
                 exec.scheduleWithFixedDelay(new PingTest(applicationContext, mService, FrameDefinition.LOCAL_ECHO), 0, delay, TimeUnit.SECONDS);
                 return true;
             }

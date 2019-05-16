@@ -9,10 +9,10 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * LatencyLogger handles all logging to external storage.
+ * ApplicationLogger handles all logging to external storage.
  */
 
-class LatencyLogger {
+class ApplicationLogger {
 
     private Date now = new Date();
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
@@ -20,7 +20,7 @@ class LatencyLogger {
 
     private File logFile = null;
 
-    public LatencyLogger() {
+    public ApplicationLogger() {
 
         File path = new File(Environment.getExternalStorageDirectory(), Constants.LOG_FOLDER);
         if (!path.exists()) {
@@ -31,13 +31,28 @@ class LatencyLogger {
     }
 
 
-    void writeString(String handle, long value) {
+    void writeLong(String handle, long value) {
         try {
             long now = System.currentTimeMillis() / 1000;
 
             FileOutputStream out = new FileOutputStream(logFile, true);
 
             out.write((now + "\t" + handle + "\t" + value + "\n").getBytes());
+            out.flush();
+            out.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    void writeString(String handle, String msg) {
+        try {
+            long now = System.currentTimeMillis() / 1000;
+
+            FileOutputStream out = new FileOutputStream(logFile, true);
+
+            out.write((now + "\t" + handle + "\t" + msg + "\n").getBytes());
             out.flush();
             out.close();
 

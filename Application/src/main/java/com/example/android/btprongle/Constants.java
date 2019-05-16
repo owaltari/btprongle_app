@@ -28,6 +28,8 @@ public interface Constants {
     int MESSAGE_DEVICE_NAME = 4;
     int MESSAGE_TOAST = 5;
 
+    int PINGTEST_INTERVAL_SECONDS = 1;
+
     // Key names received from the BluetoothService Handler
     String DEVICE_NAME = "device_name";
     String TOAST = "toast";

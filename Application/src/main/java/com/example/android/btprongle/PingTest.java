@@ -16,8 +16,8 @@ public class PingTest implements Runnable {
 
     private Context applicationContext = null;
     private BluetoothService mService = null;
-    private int pingType = 0;
-    private int round = 10;
+    private int pingType;
+    private int round = 100;
 
     PingTest(Context context, BluetoothService btser, int pt) {
         this.applicationContext = context;
@@ -27,23 +27,23 @@ public class PingTest implements Runnable {
 
     @Override
     public void run() {
-        round--;
         Log.d("PingTest, round " + round + ": ", new Date().toString());
 
         if (mService.getState() != BluetoothService.STATE_CONNECTED) {
             Toast.makeText(applicationContext.getApplicationContext(), R.string.not_connected, Toast.LENGTH_SHORT).show();
             throw new RuntimeException();
         }
-
-        Frame ping = new Frame(this.pingType);
-        long sendTime = System.currentTimeMillis();
-        ping.setPayload("sent", sendTime);
-        mService.write(ping.toBytes());
-
         if (round <= 0) {
-            // After rounds terminate this pingtester blatantly with a RuntimeException
+            // After finishing rounds terminate this pingtester blatantly with a RuntimeException
             Toast.makeText(applicationContext, R.string.pingtest_over, Toast.LENGTH_SHORT).show();
             throw new RuntimeException();
         }
+
+        Frame ping = new Frame(pingType);
+        ping.setNonce(round);
+        long sendTime = System.currentTimeMillis();
+        ping.setPayload("sent", sendTime);
+        mService.write(ping.toBytes());
+        round--;
     }
 }

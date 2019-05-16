@@ -66,6 +66,11 @@ public class Frame {
         this.ID = id;
     }
 
+    public void setNonce(int nonce) {
+        // This is used only in the case of pingtest, where nonce is used as a decreasing sequence number
+        this.nonce = nonce;
+    }
+
     public void setSrc(String src) {
         this.src = src;
     }
@@ -90,6 +95,10 @@ public class Frame {
     // Getters
     public int getID() {
         return ID;
+    }
+
+    public int getNonce() {
+        return nonce;
     }
 
     public String getSrc() {
@@ -148,6 +157,11 @@ public class Frame {
             }
         }
 
+        return result;
+    }
+    public String toSimpleString() {
+        String result = this.ID + "\t" + this.nonce + "\t" + this.src + "\t" + this.dst + "\t";
+        result += this.payload.toString();
         return result;
     }
 
